@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* DARK+ THEME */
+  --darkBodyBg: rgb(37, 37, 37);
+  --darkBg: rgb(30, 30, 30);
+  --darkLinks: rgb(116, 182, 168);
+  --darkLinksHover: rgb(48, 82, 107);
+  --darkSeparator: rgb(33, 54, 23);
+  --darkText: rgb(181, 181, 181);
+  --darkHeadings: rgb(181, 181, 181);
+  --darkNumbers: rgb(124, 124, 124);
+
+  /* LIGHT+ THEME */
+  --lightBodyBg: rgb(243, 243, 243);
+  --lightBg: rgb(255, 255, 255);
+  --lightLinks: rgb(78, 126, 139);
+  --lightLinksHover: rgb(38, 62, 210);
+  --lightSeparator: rgb(43, 97, 43);
+  --lightText: black;
+  --lightHeadings: rgb(0, 0, 0);
+  --lightNumbers: rgb(92, 138, 154);
+
+  /* MONOKAI THEME */
+  --monokaiBodyBg: rgb(30, 30, 28);
+  --monokaiBg: rgb(39, 40, 34);
+  --monokaiLinks: rgb(173, 205, 108);
+  --monokaiLinksHover: var(--darkLinksHover);
+  --monokaiSeparator: rgb(134, 132, 120);
+  --monokaiText: rgb(242, 243, 237);
+  --monokaiHeadings: rgb(247, 248, 242);
+  --monokaiNumbers: rgb(143, 144, 138);
+
+  /* GITHUB DARK */
+  --gitDarkBodyBg: rgb(27, 30, 35);
+  --gitDarkBg: rgb(36, 41, 45);
+  --gitDarkLinks: rgb(176, 201, 221);
+  --gitDarkLinksHover: var(--darkLinksHover);
+  --gitDarkSeparator: rgb(108, 114, 122);
+  --gitDarkText: rgb(225, 228, 233);
+  --gitDarkHeadings: rgb(225, 228, 233);
+  --gitDarkNumbers: rgb(121, 131, 141);
+}
+body {
+  font-family: "Fira Code", monospace;
+  background-color: var(--darkBodyBg);
+}

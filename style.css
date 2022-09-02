@@ -78,8 +78,9 @@ a:hover {
   color: var(--darkLinksHover);
 }
 .wrapper {
-  width: 63%;
-  margin: 0 auto;
+  width: 70%;
+  margin-right: auto;
+  margin-left: 20%;
 }
 nav {
   margin-top: 4.5rem;
@@ -91,13 +92,14 @@ nav ul {
 }
 nav li {
   background-color: rgb(45, 45, 45);
-  padding: 0.6rem 4rem 0.6rem 0.7rem;
+  padding: 0.6rem 4rem 0.4rem 0.7rem;
   text-align: left;
   cursor: pointer;
   font-size: small;
 }
 nav li a {
   color: var(--darkText);
+  text-decoration: none;
 }
 nav li a:hover {
   color: inherit;
@@ -128,6 +130,11 @@ nav ul .home {
   color: var(--darkText);
 }
 
+/* This was taken out because it isn't aligned with the content set
+.num_line p {
+  margin-bottom: 0.1rem;
+} */
+
 .separator {
   display: flex;
   gap: 1rem;
@@ -154,6 +161,7 @@ nav ul .home {
 .foot {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 90vh;
 }
 .foot_links {
   display: flex;
@@ -161,9 +169,11 @@ nav ul .home {
   gap: 0.5rem;
   cursor: pointer;
 }
-.foot_links li {
+.foot_links li,
+.link {
   text-decoration: underline;
   text-underline-offset: 5px;
+  color: var(--darkLinks);
 }
 .foot_theme select {
   color: var(--darkText);

@@ -25,21 +25,35 @@ nav ul .home {
   border-radius: 0.4rem;
 }
 .header_left h1 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: rgb(204, 202, 202);
 }
-p {
-  font-size: 17px;
-}
+
 .header_left p {
   width: 70%;
 }
 .header_right p {
-  font-size: 0.9rem;
-  line-height: 1.5rem;
+  font-size: 0.8rem;
+  min-width: max-content;
+  line-height: 1.4rem;
 }
 
-article > img:nth-of-type(1) {
+article {
+  margin-bottom: 1.5rem;
+}
+article > img {
   width: 100%;
   margin-block: 1.5rem 1.4rem;
+}
+.bullet {
+  margin-right: 1rem;
+  color: var(--darkLinks);
+}
+code {
+  font-size: 16px;
+  color: rgb(206, 145, 120);
+}
+article h2 {
+  font-size: 1.2rem;
+  margin-block: 3rem 1.4rem;
 }

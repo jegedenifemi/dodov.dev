@@ -10,7 +10,7 @@
   --darkLinks: rgb(116, 182, 168);
   --darkLinksHover: rgb(48, 82, 107);
   --darkSeparator: rgb(33, 54, 23);
-  --darkText: rgb(181, 181, 181);
+  --darkText: rgb(212, 212, 212);
   --darkHeadings: rgb(181, 181, 181);
   --darkNumbers: rgb(124, 124, 124);
 
@@ -76,10 +76,12 @@ a {
 a:hover {
   color: var(--darkLinksHover);
 }
+p {
+  line-height: 1.3;
+}
 .wrapper {
-  width: 70%;
-  margin-right: auto;
-  margin-left: 20%;
+  width: 63%;
+  margin: 0 auto;
 }
 nav {
   margin-top: 4.5rem;
@@ -108,8 +110,9 @@ nav ul .home {
   color: white;
 }
 .main {
-  padding-top: 1.5rem;
+  padding-block: 1.5rem;
   width: 100%;
+  height: fit-content;
   background-color: var(--darkBg);
   padding-inline: 5rem;
   position: relative;
@@ -117,9 +120,14 @@ nav ul .home {
 .main .num_line {
   position: absolute;
   left: 2.5rem;
+  top: 1.8rem;
 }
 .num_line p {
   margin-bottom: 0.2rem;
+  opacity: 0.4;
+}
+.num_line p:hover {
+  opacity: 1;
 }
 .separator {
   display: flex;
@@ -143,6 +151,7 @@ nav ul .home {
 /* FOOTER */
 .foot {
   display: flex;
+  margin-top: 2rem;
   justify-content: space-between;
   margin-bottom: 90vh;
 }

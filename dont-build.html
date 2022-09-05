@@ -11,6 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16 32x32"
+      href="https://dodov.dev/media/site/7c35252aa6-1640615600/favicon-dark-plus.png"
+    />
   </head>
 
   <body>
@@ -21,7 +27,7 @@
           <li class="blog"><a href="./blog.html">blog</a></li>
           <li class="dont_build">
             dont-build-your-own-framework
-            <button class="tab_close" title="Close Article">x</button>
+            <a href="index.html" class="tab_close" title="Close Article">x</a>
           </li>
           <li class="projects"><a href="./projects.html">projects</a></li>
         </ul>
@@ -249,10 +255,18 @@
             src="./img/dont-build.png"
             alt="Terminal command (rm -rf
           .git), surrounded by random characters."
+            id="img1"
           />
+          <div id="modal1" class="modal1">
+            <img
+              src="./img/dont-build.png"
+              alt="Terminal command (rm -rf
+          .git), surrounded by random characters."
+            />
+          </div>
 
           <p>
-            1 In 2019, I wanted to create a website that closely followed our
+            In 2019, I wanted to create a website that closely followed our
             custom design and had smooth animations and interactions. I looked
             at <a href="#" class="link">UIkit</a>, but I didn't pick it for two
             reasons:
@@ -260,11 +274,16 @@
 
           <br />
 
-          <p>1<span class="bullet">-</span> It had its own opinion on design</p>
-          <p>
-            <span class="bullet">-</span> It didn't meet my requirements for
-            "smoothness"
-          </p>
+          <ul>
+            <li class="list_items">
+              <div><p>It had its own opinion on design</p></div>
+            </li>
+            <li class="list_items">
+              <div>
+                <p>It didn't meet my requirements for "smoothness"</p>
+              </div>
+            </li>
+          </ul>
 
           <br />
 
@@ -414,11 +433,12 @@
             >:
           </p>
           <br />
-          <p>
-            <span class="bullet">></span>If you're not uncomfortable by the time
-            you're launching, <br />
-            <span class="bullet">></span>it's way too late.
-          </p>
+          <blockquote>
+            <p>
+              If you're not uncomfortable by the time you're launching, it's way
+              too late.
+            </p>
+          </blockquote>
 
           <br />
 
@@ -442,15 +462,27 @@
 
           <br />
 
-          <p>
-            <span class="bullet">-</span>If you've built something valuable,
-            you'll get more like-minded people to help you out with it
-          </p>
+          <ul>
+            <li class="list_items">
+              <div>
+                <p>
+                  If you've built something valuable, you'll get more
+                  like-minded people to help you out with it
+                </p>
+              </div>
+            </li>
+            <li class="list_items">
+              <div>
+                <p>
+                  If you've built something pointless, you'll save time and
+                  probably learn about new and better approaches
+                </p>
+              </div>
+            </li>
+          </ul>
+
           <br />
-          <p>
-            <span class="bullet">-</span>If you've built something pointless,
-            you'll save time and probably learn about new and better approaches
-          </p>
+
           <br />
 
           <h2>Conclusion</h2>
@@ -468,7 +500,14 @@
           <img
             src="https://imgs.xkcd.com/comics/standards.png"
             alt="xkcd comic about standards"
+            id="img2"
           />
+          <div id="modal2" class="modal2">
+            <img
+              src="https://imgs.xkcd.com/comics/standards.png"
+              alt="xkcd comic about standards"
+            />
+          </div>
 
           <p>
             We should work on solving new problems, not existing ones. If you
@@ -508,9 +547,9 @@
           </ul>
 
           <div class="foot_theme">
-            <select name="theme" id="">
-              <option value="dark">Dark +</option>
-              <option value="light">Light +</option>
+            <select name="theme" id="theme">
+              <option value="dark" id="dark">Dark +</option>
+              <option value="light" id="light">Light +</option>
               <option value="monokai">Monokai</option>
               <option value="g-dark">GitHub Dark</option>
               <option value="g-light">GitHub Light</option>

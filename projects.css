@@ -1,0 +1,27 @@
+.nexo, .rundown, .ghostmask, .oblik {
+    /* display: flex; */
+    align-items: flex-start;
+    margin-bottom: 10%;
+    /* height: 10%; */
+  }
+  
+  .header {
+    margin-bottom: 3%;
+  }
+  
+  .nexo-image, .rundown-image, .ghostmask-image, .oblik-image {
+    width: 96px;
+    height: 96px;
+    margin-inline-end: 3%;
+  }
+  
+  img {
+    width: 90%;
+    height: 90%;
+  }
+  
+  .nexo-text, .rundown-text, .ghostmask-text, .oblik-text {
+    width: 60%;
+  }
+
+  

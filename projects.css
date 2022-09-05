@@ -33,3 +33,12 @@ img {
 .oblik-text {
   width: 90%;
 }
+
+
+.nexo-head,
+.rundown-head,
+.ghostmask-head,
+.oblik-head {
+  text-decoration: none;
+}
+  

@@ -1,3 +1,4 @@
+
 // const textarea=document.querySelector('textarea')
 // const lineNumbers=document.querySelector('.line-numbers')
 
@@ -53,4 +54,14 @@ clickZoom2.onclick = () => {
     }
   };
 };
- 
+
+/* code snippet to change a link color when clicked
+
+const active = document.getElementById('active');
+
+active.addEventListener('click', function onClick() {
+  active.style.color = 'white';
+
+});
+
+*/

@@ -5,6 +5,11 @@ header {
 nav ul .home {
   background-color: rgb(45, 45, 45);
   color: unset;
+  pointer-events: visible;
+}
+
+.home a:visited {
+  color: #a3a3a3
 }
 .dont_build {
   background-color: var(--darkBg);
@@ -25,21 +30,117 @@ nav ul .home {
   border-radius: 0.4rem;
 }
 .header_left h1 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  width: 95%;
   color: rgb(204, 202, 202);
 }
-p {
-  font-size: 17px;
-}
+
 .header_left p {
   width: 70%;
 }
 .header_right p {
-  font-size: 0.9rem;
-  line-height: 1.5rem;
+  font-size: 0.8rem;
+  min-width: max-content;
+  line-height: 1.4rem;
 }
 
-article > img:nth-of-type(1) {
+article {
+  margin-bottom: 1.5rem;
+}
+article > img {
+  cursor: zoom-in;
   width: 100%;
   margin-block: 1.5rem 1.4rem;
+}
+.list_items > div {
+  display: inline-flex;
+}
+.list_items > div::before {
+  content: "-";
+  margin-right: 1rem;
+  color: var(--darkLinks);
+}
+.modal1,
+.modal2 {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+.modal1 img,
+.modal2 img {
+  width: 63rem;
+  cursor: zoom-in;
+}
+.bullet {
+  margin-right: 1rem;
+  color: var(--darkLinks);
+}
+code {
+  font-size: 16px;
+  color: rgb(206, 145, 120);
+}
+article h2 {
+  font-size: 1.2rem;
+  margin-block: 3rem 1.4rem;
+  font-weight: 700;
+}
+blockquote {
+  display: flex;
+  overflow: hidden;
+}
+blockquote::before {
+  content: "> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >";
+  width: 1ch;
+  color: var(--darkLinks);
+  line-height: 1.5rem;
+  height: 1.5rem;
+  margin-right: 2ch;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    margin-top: 0;
+  }
+  nav li {
+    padding-right: 4vw;
+  }
+  .main {
+    padding-inline: 3rem 1rem;
+  }
+  .main .num_line {
+    left: 0.6rem;
+  }
+  header {
+    flex-direction: column;
+  }
+  .header_left h1 {
+    width: 80%;
+  }
+  .header_left p {
+    width: 100%;
+  }
+  .header_right > p:nth-child(2) {
+    display: none;
+  }
+  article {
+    max-width: 380px;
+  }
+  .foot {
+    gap: 1.5rem;
+  }
+  .foot,
+  .foot_links {
+    flex-direction: column;
+  }
+  .foot_links span {
+    display: none;
+  }
 }

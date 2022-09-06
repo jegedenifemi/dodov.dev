@@ -1,0 +1,44 @@
+.nexo,
+.rundown,
+.ghostmask,
+.oblik {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2%;
+  /* height: 10%; */
+}
+
+.header {
+  margin-bottom: 3%;
+  flex-direction: column;
+}
+
+.nexo-image,
+.rundown-image,
+.ghostmask-image,
+.oblik-image {
+  width: 100px;
+  height: 100px;
+  margin-inline-end: 3%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.nexo-text,
+.rundown-text,
+.ghostmask-text,
+.oblik-text {
+  width: 90%;
+}
+
+
+.nexo-head,
+.rundown-head,
+.ghostmask-head,
+.oblik-head {
+  text-decoration: none;
+}
+  

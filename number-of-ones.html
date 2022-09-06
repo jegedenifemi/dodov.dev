@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>number-of-ones</title>
     <link rel="stylesheet" href="./number-of-ones.css" />
-    <link rel="stylesheet" href="./build.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -619,6 +619,9 @@
 
           <p>We can get digits on the right by applying %, the <a href="#" class="link">remainder 
             operator</a>,to the number and the multiplier:.</p>
+            <br />
+
+    
             <ol>
                 <li class="list_items">
                   <div><p>216 % 10  = divide by 10 and get the remainder  => 6</p></div>
@@ -629,8 +632,194 @@
                   </div>
                 </li>
               </ol>
-        
-          
+            <br />
+
+            <p>
+                However, we must add 1 to that remainder, because we need to 
+                count the 0 as well. In other words, for the tens, we have:
+            </p>
+            <br />
+
+            <ol>
+                <li class="list_items">
+                  <div><p>210, 211, 212, 213, 214, 215, 216 => 7 numbers in total</p></div>
+                </li>
+                <li class="list_items">
+                  <div>
+                    <p>└┴───────────────────────────────── this counts as well</p>
+                  </div>
+                </li>
+              </ol>
+            <br />
+
+            <p>
+                Put together, our logic looks like this:
+            </p>
+            <br />
+
+            <ol>
+                <li class="list_items">
+                  <div><p>let n = 236;</p></div>
+                </li>
+                <li class="list_items">
+                  <div>
+                    <p>let strings = n.toString().split("");       // ["2", "3", "6"]</p>
+                  </div>
+                </li>
+                <li class="list_items">
+                    <div><p>let ints = strings.map((s) => parseInt(s)); // [2, 3, 6]</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>let digits = ints.reverse();                // [6, 3, 2]</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>let sum = 0;</p></div>
+                  </li>
+                <br />
+
+                <li class="list_items">
+                    <div><p>digits.forEach((digit, i) => {</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp let mul = Math.pow(10, i);</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp let cycles = Math.floor(n / (mul * 10));</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp let ones = cycles * mul;</p></div>
+                  </li>
+                <br />
+
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp if (digit > 1) {</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp ones += mul; // add one extra cycle</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp } else if (digit === 1) {</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp ones += (n % mul) + 1; // incomplete cycle</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p> &nbsp &nbsp }</p></div>
+                  </li>
+                <br />
+
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp sum += ones;</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>});</p></div>
+                  </li>
+                <br />
+
+                <li class="list_items">
+                    <div><p>console.log(sum); // 154</p></div>
+                  </li>
+              </ol>
+            <br />
+
+            <p>Now, we can wrap that logic in an easily reusable function and 
+                use <a href="#" class="link">reduce()</a>to accumulate the sum:</p>
+            <br />
+
+            <ol>
+                <li class="list_items">
+                  <div><p>function numberOfOnes(n) {</p></div>
+                </li>
+                <li class="list_items">
+                  <div>
+                    <p>&nbsp &nbsp return n</p>
+                  </div>
+                </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp.toString()</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp.split("")</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp.map((char) => parseInt(char))</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp.reverse()</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp .reduce((sum, digit, i) => {</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp const mul = Math.pow(10, i);</p></div>
+                  </li>
+                <br />
+
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sum += Math.floor(n / (mul * 10)) * mul;</p></div>
+                  </li>
+                <br />
+
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp if (digit > 1) {</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sum += mul;</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } else if (digit === 1) {</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sum += (n % mul) + 1;</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p></div>
+                  </li>
+                <br />
+
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp return sum;</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>&nbsp &nbsp &nbsp &nbsp }, 0);</p></div>
+                </li>
+                <li class="list_items">
+                    <div><p>}</p></div>
+                  </li>
+              </ol>
+            <br />
+
+            <p>Here are some examples:</p>
+
+            <ol>
+                <li class="list_items">
+                  <div><p>console.log(numberOfOnes(14));    // 7</p></div>
+                </li>
+                <li class="list_items">
+                  <div>
+                    <p>console.log(numberOfOnes(236));   // 154</p>
+                  </div>
+                </li>
+                <li class="list_items">
+                    <div><p>console.log(numberOfOnes(420));   // 192</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>console.log(numberOfOnes(1337));  // 812</p></div>
+                  </li>
+                <li class="list_items">
+                    <div><p>console.log(numberOfOnes(65536)); // 36714</p></div>
+                  </li>
+              </ol>
+            <br />
+
+            <p>Play around with the code <a href="#" class="link">on CodePen</a>!</p>
+            <br />
+            <br />
+
+            <p>Also, make sure to subscribe to <a href="#" class="link"> rendezvous with cassidoo</a>for 
+                similar puzzles and useful web development content.
+            </p>
+            <br />
           
         </article>
 

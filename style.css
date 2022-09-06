@@ -171,5 +171,36 @@ nav ul .home {
 /* HOME HOME HOME HOME HOME HOME */
 
 /* BLOG BLOG BLOG BLOG BLOG BLOG */
-
+img{
+  width: 180px;
+  height: 110px;
+}
+.flex{
+  display: flex;
+  gap: 1rem;
+}
+.num_line h3{
+  color: white;
+  width: 500px;
+}
+.num_line a{
+  text-decoration: none;
+  color: white;
+}
+.num_line p{
+  color: white;
+  width: 500px;
+}
+h3{
+  font-size: 11;
+}
+h3:hover{
+  color: blue;
+}
+.hero{
+  position: absolute;
+  top: 0rem;
+  left: 2rem;
+  ;
+}
 /* PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS */

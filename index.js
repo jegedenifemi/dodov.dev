@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // const textarea=document.querySelector('textarea')
 // const lineNumbers=document.querySelector('.line-numbers')
 
@@ -20,7 +19,7 @@
 //     }
 // })
 // console.log('textarea','textarea')
-=======
+
 // get images to be zoomed on click
 let clickZoom1 = document.getElementById("img1");
 let clickZoom2 = document.getElementById("img2");
@@ -54,4 +53,4 @@ clickZoom2.onclick = () => {
     }
   };
 };
->>>>>>> cd24b17ef97c6680fe041b0feb7b4878ef7e62d9
+ 

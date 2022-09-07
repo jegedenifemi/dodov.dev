@@ -113,9 +113,6 @@ nav li a {
   color: #a3a3a3;
   text-decoration: none;
 }
-nav li a:hover {
-  color: #a3a3a3;
-}
 nav ul .home {
   background-color: var(--darkBg);
   pointer-events: none;
@@ -409,6 +406,7 @@ nav ul .home {
 
 .fifth-content1 img {
   height: 85px;
+}
 .fifth-content2 p {
   font-size: 16px;
 }
@@ -441,10 +439,6 @@ nav ul .home {
   right: 0;
   top: 50%;
 }
-
-/* BLOG BLOG BLOG BLOG BLOG BLOG */
-
-/* PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS */
 
 @media (min-width: 350px) and (max-width: 599px) {
   #first-content-container {

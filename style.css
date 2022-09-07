@@ -407,6 +407,7 @@ nav ul .home {
 .fifth-content1 img {
   height: 85px;
 }
+
 .fifth-content2 p {
   font-size: 16px;
 }
@@ -439,6 +440,33 @@ nav ul .home {
   right: 0;
   top: 50%;
 }
+
+
+/* BLOG BLOG BLOG BLOG BLOG BLOG */
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-text h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.imaged img {
+  width: 64px;
+  height: 360px;
+}
+
+/* PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS */
 
 @media (min-width: 350px) and (max-width: 599px) {
   #first-content-container {

@@ -26,14 +26,17 @@
     <div class="wrapper">
       <nav>
         <ul>
-          <li class="home"><a href="#">home</a></li>
-          <li class="blog"><a href="#">blog</a></li>
-          <li class="projects"><a href="projects.html">projects</a></li>
+          <li class="home"><a href="index.html" id="active">home</a></li>
+          <li class="blog"><a href="./blog.html">blog</a></li>
+          <li class="projects"><a href="./projects.html">projects</a></li>
         </ul>
       </nav>
 
       <div class="main">
         <div class="num_line">
+
+          
+
           <a><p>1</p></a>
           <a><p>2</p></a>
           <a><p>3</p></a>
@@ -89,13 +92,20 @@
             <img
               src="https://dodov.dev/media/pages/home/4ef6a00cf5-1639463741/hristiyan-dodov-168x.jpg"
               alt="man-img"
-              style="height: 152px"
             />
+            <div class="content-hide">
+              <h2>Hristiyan Dodov</h2>
+              <p class="paragraph1">
+                Full-Stack Developer <br />
+                at <a href="https://oblik.studio/"> Oblik Studio</a>
+              </p>
+            </div>
           </div>
           <div class="first-content2">
-            <h2>Hristiyan Dodov</h2>
-            <p class="paragraph1">
-              Full-Stack Developer at <a> Oblik Studio</a>
+            <h2 class="header2" id="content-hide2">Hristiyan Dodov</h2>
+            <p class="paragraph1" id="content-hide2">
+              Full-Stack Developer at
+              <a href="https://oblik.studio/"> Oblik Studio</a>
             </p>
             <p class="paragraph2">
               Passionate software engineer with the dream of solving problems
@@ -110,8 +120,8 @@
           <hr />
         </div>
 
-        <div>
-          <h3 style="margin-bottom: 1rem">Latest Articles</h3>
+        <div class="header3">
+          <h3 style="margin-bottom: 1.6rem">Latest Articles</h3>
         </div>
 
         <div id="second-content-container">
@@ -178,46 +188,81 @@
         </div>
 
         <div>
-          <h3 style="margin-top: -0.2rem; margin-bottom: 2rem">projects</h3>
+          <h3
+            style="margin-top: 1.6rem; margin-bottom: 2rem"
+            class="project-header"
+          >
+            projects
+          </h3>
         </div>
 
         <div id="fifth-content-container">
           <div class="fifth-content1">
-            <img
-              src="https://dodov.dev/media/pages/projects/nexo/e035864770-1640195260/nexo-logo.svg"
-              alt="nexo-img"
-              style="height: 85px"
-            />
+            <a href="./nexo.html">
+              <img
+                src="https://dodov.dev/media/pages/projects/nexo/e035864770-1640195260/nexo-logo.svg"
+                alt="nexo-img"
+              />
+            </a>
+            <div class="hidden1">
+              <a href="./nexo.html" class="no-underline-a"><h2>Nexo</h2></a>
+              <a href="https://nexo.io/" class="underline-a"> nexo.io</a>
+            </div>
           </div>
+
           <div class="fifth-content2">
-            <h2>Nexo</h2>
+            <a href="./nexo.html" class="no-underline-a" id="hidden2"
+              ><h2>Nexo</h2></a
+            >
             <p>
               Developing and maintaining the product marketing website of the
               world's first crypto-backed loans.
             </p>
-            <a> nexo.io</a>
+            <a href="https://nexo.io/" class="underline-a" id="hidden2">
+              nexo.io</a
+            >
           </div>
         </div>
 
         <div id="fifth-content-container">
           <div class="fifth-content1">
-            <img
-              src="https://dodov.dev/media/pages/projects/rundown/72a28c38cc-1655633637/rundown-logo.svg"
-              alt="nexo-img"
-              style="height: 85px"
-            />
+            <a href="">
+              <img
+                src="https://dodov.dev/media/pages/projects/rundown/72a28c38cc-1655633637/rundown-logo.svg"
+                alt="nexo-img"
+              />
+            </a>
+            <div class="hidden1">
+              <a href="./rundown.html" class="no-underline-a"
+                ><h2>Rundown</h2></a
+              >
+              <a
+                href="https://chrome.google.com/webstore/detail/rundown/opjjddkgmphhkjlgocopmeolmmibiphb"
+                class="underline-a"
+              >
+                chrome.google.com</a
+              >
+            </div>
           </div>
           <div class="fifth-content2">
-            <h2>Rundown</h2>
+            <a href="./rundown.html" class="no-underline-a" id="hidden2"
+              ><h2>Rundown</h2></a
+            >
             <p>
               Turns your browser's new-tab page into a simple markdown editor
               with to-do lists and summaries.
             </p>
-            <a> chrome.google.com</a>
+            <a
+              href="https://chrome.google.com/webstore/detail/rundown/opjjddkgmphhkjlgocopmeolmmibiphb"
+              class="underline-a"
+              id="hidden2"
+            >
+              chrome.google.com</a
+            >
           </div>
         </div>
 
-        <div class="read-more-section">
+        <div class="read-more-section2">
           <a href="" id="right-arrow"
             >View More <i class="fa-sharp fa-solid fa-arrow-right"></i
           ></a>
@@ -255,7 +300,6 @@
         </div>
       </div>
     </div>
-
     <script src="./index.js"></script>
   </body>
 </html>

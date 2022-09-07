@@ -109,7 +109,8 @@ nav li {
   cursor: pointer;
   font-size: small;
 }
-nav li a {
+nav li a,
+nav li a:hover {
   color: #a3a3a3;
   text-decoration: none;
 }
@@ -133,7 +134,7 @@ nav ul .home {
 }
 .main .num_line {
   position: absolute;
-  left: 2rem;
+  left: 1.5rem;
   font-size: 17px;
   text-align: right;
 }

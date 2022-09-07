@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Don't Build Your Owm Framework</title>
+    <title>Browser Cache and Edge Cache Explained</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./build.css" />
     <link
@@ -26,7 +26,7 @@
           <li class="home"><a href="./index.html">home</a></li>
           <li class="blog"><a href="./blog.html">blog</a></li>
           <li class="dont_build">
-            dont-build-your-own-framework
+            browser-cache-and-edge-cache-explained
             <a href="index.html" class="tab_close" title="Close Article">x</a>
           </li>
           <li class="projects"><a href="./projects.html">projects</a></li>
@@ -238,25 +238,23 @@
 
         <article>
           <header>
-            <div class="header_left">
-              <h1>Don't Build Your Own Framework</h1>
-              <p>
-                Delusions of having the ability to solve something once and for
-                all.
-              </p>
+            <div class="header_left browser_header_left">
+              <h1>Browser Cache and Edge Cache Explained</h1>
+              <p>You updated it? Well, yes, but not really.</p>
             </div>
             <div class="header_right">
-              <p title="Sunday,June 19,2022, 13:00 EEST">19 Jun 2022</p>
-              <p>1197 lines</p>
+              <p title="Tuesday,February 8,2022, 16:00 EET">08 Feb 2022</p>
+              <p>182 lines</p>
             </div>
           </header>
 
           <img
-            src="./img/dont-build.png"
+            src="./img/browser-edge.png"
             alt="Terminal command (rm -rf
           .git), surrounded by random characters."
             id="img1"
           />
+
           <div id="modal1" class="modal1">
             <img
               src="./img/dont-build.png"
@@ -265,165 +263,142 @@
             />
           </div>
 
-          <p>
-            In 2019, I wanted to create a website that closely followed our
-            custom design and had smooth animations and interactions. I looked
-            at <a href="#" class="link">UIkit</a>, but I didn't pick it for two
-            reasons:
-          </p>
-
+          <p>Does the following sound familiar?</p>
           <br />
-
-          <ul>
-            <li class="list_items">
-              <div><p>It had its own opinion on design</p></div>
-            </li>
-            <li class="list_items">
-              <div>
-                <p>It didn't meet my requirements for "smoothness"</p>
-              </div>
-            </li>
-          </ul>
+          <blockquote class="browser_green">
+            <p>
+              "The new feature is live."<br />
+              "I can't see it."<br />
+              "Have you cleared your browser cache?" <br />
+              "Yes. It's still not visible."<br />
+              <strong><em>"Hmmm…"</em></strong>
+            </p>
+          </blockquote>
 
           <br />
 
           <p>
-            This lead me to search for other frameworks that, unlike UIkit,
-            provide just the basic JavaScript functionality, allowing you to
-            style and animate as you wish. I didn't find anything. So,
-            naturally, I decided to
-            <a href="#" class="link"> make my own thing.</a>
-
-            <br />
+            This could happen when there are multiple layers of
+            <a href="#" class="link">caching</a> in play and one of them has not
+            expired. If you've used something like
+            <a href="#" class="link">Cloudflare CDN</a> , you've likely ran into
+            this.
           </p>
 
+          <h2>What is Browser Caching?</h2>
           <p>
-            I was developing the framework in parallel with the website I was
-            working on and it was wonderful. I was able to make the code just
-            right and implement just the features I need. I took some
-            inspiration from UIkit, but stuck to my main idea.
+            Let's say your website has a logo in the header and it appears on
+            all pages. When users land on your website and start browsing,
+            they'll be downloading the <strong>same</strong> logo on
+            <strong>every</strong> page load. This inefficiency increases
+            bandwidth costs and load times.
           </p>
-
-          <br />
-
-          <p>
-            Later, I noticed that things weren't very efficient, so I decided to
-            refactor. But because I was developing that framework and
-            simultaneously using it, I had to rework not only the framework, but
-            the website as well. Apart from that, I was trying to make this work
-            for as many use cases as I could. What if you use React? What if you
-            don't? What if you use jQuery? What if you don't even know
-            JavaScript that much?
-          </p>
-
-          <br />
-
-          <p>
-            At this point, my enthusiasm slowly started to fade away. Without
-            realizing it, I had put myself in a position where I wanted to solve
-            problems that don't yet exist and solve them perfectly. But I still
-            believed that in the end, it'd be "worth it".
-          </p>
-
-          <br />
-
-          <p>
-            Then, our team started to grow. I was no longer the only one working
-            on that website. Since it used my framework, I had to onboard new
-            people with it. This meant that I had to write up a README, then
-            documentation, example usage, etc. Despite that, we still had to
-            clear up some stuff in Slack.
-          </p>
-
-          <br />
-
-          <p>
-            Because our team grew, so did our workload. This caused work on the
-            framework in parallel with the website to transition in work on the
-            framework during the weekends and early mornings.
-          </p>
-
-          <br />
-
-          <p>
-            I carried on, though. I had (and to this point, still have) the
-            habit of abandoning projects, so I was determined to at least boil
-            the framework down to small organized JavaScript snippets that you
-            could download via npm. But do I use
-            <a href="#" class="link">Custom Elements</a> or even go simpler than
-            that and use just ES6 classes?
-          </p>
-
-          <br />
-
-          <p>
-            Recently, I started getting more and more into the React ecosystem.
-            Late to the party, I know. I also started noticing more websites
-            with <code> &lt;div id="__next"&gt;</code> or <code>__nuxt</code> or
-            <code>___gatsby</code>. So no matter how I build my framework, it
-            wouldn't work with the way most people build for the web. Since I
-            want to start using these tools as well, my framework won't work for
-            me either.
-          </p>
-
-          <br />
-
-          <p>
-            Unrelated to this, I had slowly started to pay more attention to my
-            health and well-being. I changed my eating and sleeping habits,
-            started to exercise and stretch more, I even started reading books…
-            This made the weekends and early mornings much more packed and
-            valuable.
-          </p>
-
-          <br />
-
-          <p>
-            And now I'm here. I had made something that nobody really uses, but
-            still represents a solid part of our workflow. What do I do? Well, I
-            think I've learned some lessons in the past 3 years.
-          </p>
-
-          <h2>Code Doesn't Matter</h2>
-          <p>
-            Unless you're building software for aircraft or medical equipment,
-            nobody really cares about your code, and neither should you.
-            Especially in web development. At the end of the day, you want a
-            bunch of boxes with text and images in them. You can have a hellish
-            codebase and still get the job done. A perfect codebase doesn't
-            exist. At least not for a very long time, in large projects, or with
-            many people involved. Things will get messy and you should be ready
-            to accept that.
-          </p>
-
-          <h2>Maintenance Is a Burden</h2>
-          <p>
-            Let's say you've built something and it works perfectly. That won't
-            last long. Bugs will appear, new people will join and documentation
-            will be needed, features will be requested. Who's going to handle
-            that? If you're doing this as a side project, are you prepared to be
-            distracted by these things while working? If not, are you prepared
-            to do them in your free time?
-          </p>
-
           <br />
           <p>
-            Even if people start contributing with pull requests and taking some
-            of that load off of you, you'll still have to review and approve of
-            what's going on.
+            When sending the logo to the user, your server can also provide the
+            <a href="#" style="text-underline-offset: 5px">
+              <code style="font-size: 17px">Cache-Control</code> response
+              header</a
+            >
+            with an expiration value like <code>max-‍age=604800</code>. This
+            will tell the browser to store the logo locally, on the user's hard
+            drive, for 604800 seconds, which is 7 days. Until that time passes,
+            whenever your website references the logo through the same URL, the
+            user's browser will use its cached version. After that, the browser
+            will request the logo from your server once again and cache it for
+            another 7 days.
           </p>
 
-          <h2>Third-Party Is Fine</h2>
+          <h2>What is an Edge?</h2>
           <p>
-            If you find someone else who has done the work for you, use it.
-            There might be things that you don't like, but compared to the
-            hidden costs of maintaining something yourself, they won't matter.
-            If that third-party code has been out for a long time, chances are
-            that most common bugs and edge cases would have already been
-            handled. Doing things yourself should be your last resort, because
-            you'll slowly discover the same issues as well and waste time on
-            solved problems.
+            If your audience is mainly European, it would probably make sense to
+            put your server in London, for example. But if your website starts
+            receiving traffic from America, those requests would have to travel
+            an entire ocean, which can make them several times slower, due to
+            <a href="#" class="link">latency</a> . With a
+            <a href="#" class="link">CDN</a> , you have a system of servers
+            spread throughout the world that
+            <a href="#" class="link">proxy</a> user traffic to your server and
+            <a href="#" class="link">solve this performance issue</a> .
           </p>
+          <br />
+          <p>
+            Among the <a href="#" class="link">hundreds of servers</a> in a CDN,
+            the geographically closest one to a user is called an edge and is
+            the one that this user's browser directly communicates with:
+          </p>
+
+          <!-- SECOND IMAGE HERE -->
+          <figure>
+            <img
+              src="./img/browsercache2.png"
+              alt="Response flow from server to user over a CDN"
+              id="img2"
+            />
+          </figure>
+          <figcaption>Response flow from server to user over a CDN</figcaption>
+
+          <div id="modal2" class="modal2">
+            <img
+              src="./img/browsercache2.png"
+              alt="Response flow from server to user over a CDN"
+            />
+          </div>
+          <!-- SECOND IMAGE HERE -->
+
+          <h2>What is Edge Caching?</h2>
+          <p>
+            While browser caching helps with many requests by the same user, it
+            doesn't solve the issue of many users making requests, because each
+            user has their own browser with their own cache. To fix this, you
+            need a shared cache.
+          </p>
+          <br />
+          <p>
+            With a CDN, all user requests are funneled through the closest edge
+            server. If that server caches the responses, it'll be able to serve
+            those users without having to bother your own server. This means
+            that it no longer matters if you have 1 user or 10000, because once
+            that first response for a resource is served and cached, the load
+            shifts from your server to the CDN, which can serve the other 9999
+            by itself.
+          </p>
+          <br />
+          <p>
+            Cloudflare caches only static assets
+            <a href="#" class="link">by default</a> , such as images, fonts,
+            scripts, etc. The HTML containing the page content is not cached,
+            because if you have an e-commerce store, for example, each user will
+            have their own shopping cart, and if you cache that, the next user
+            will see the previous one's items. On the other hand, an image is
+            expected to be the same for every user and can safely be cached.
+          </p>
+          <br />
+          <p>
+            Sites without shopping carts and other dynamic content, such as
+            blogs, can opt in to <a href="#" class="link">cache everything</a> .
+            This makes it possible for an edge to serve entire pages all by
+            itself, without having to contact your server, as long as everything
+            is cached. This way, you can have a very weak server, yet handle
+            thousands of requests per second, because the load is mainly on the
+            CDN.
+          </p>
+          <br />
+
+          <h2>Cache Invalidation</h2>
+          <p>
+            The hard part in caching is picking a
+            <a href="#" class="link">time to live (TTL)</a>, which determines
+            when an entry is stale and should be discarded.
+          </p>
+          <br />
+          <p>
+            Images and other assets can be cached for longer periods, because
+            even if you pick a way too long TTL, you can change the URL to the
+            resource and trigger a fresh request-response cycle:
+          </p>
+
+          <div></div>
 
           <h2>Launch Early</h2>
           <p>
@@ -435,8 +410,8 @@
           <br />
           <blockquote>
             <p>
-              If you're not uncomfortable by the time you're launching, <br />
-              it's way too late.
+              If you're not uncomfortable by the time you're launching, it's way
+              too late.
             </p>
           </blockquote>
 
@@ -484,50 +459,35 @@
           <br />
 
           <br />
+          <ul>
+            <li class="list_items">
+              <div><p>It had its own opinion on design</p></div>
+            </li>
+            <li class="list_items">
+              <div>
+                <p>It didn't meet my requirements for "smoothness"</p>
+              </div>
+            </li>
+          </ul>
 
           <h2>Conclusion</h2>
           <p>
-            I will archive my project. These problems have already been solved
-            by many people, many times. We all know that
-            <a href="#" class="link"
-              >every day, a new JavaScript framework is born</a
-            >. This happens because people like me think they've got the silver
-            bullet and can solve a certain problem once and for all. But that's
-            impossible and delusional. It's like that
-            <a href="#" class="link">xkcd comic about standards</a>:
-          </p>
-
-          <img
-            src="https://imgs.xkcd.com/comics/standards.png"
-            alt="xkcd comic about standards"
-            id="img2"
-          />
-          <div id="modal2" class="modal2">
-            <img
-              src="https://imgs.xkcd.com/comics/standards.png"
-              alt="xkcd comic about standards"
-            />
-          </div>
-
-          <p>
-            We should work on solving new problems, not existing ones. If you
-            find an issue with someone else's code, report it or directly submit
-            a pull request and fix it. Not just for yourself, but for everybody
-            else! Your contributions will be nicely welcomed! Don't create
-            something new with its own set of problems.
+            <strong>Browser cache</strong> helps with subsequent requests by the
+            same user and makes your website feel snappy, because your assets
+            don't have to travel over the internet.
           </p>
           <br />
           <p>
-            It's impossible to build something entirely by yourself. At some
-            point, your "pristine" code will have to interact with other
-            people's "messy" code. Sure, you might not use third-party code on
-            your website, but its existence still depends on it. The operating
-            system it runs on is not built by you. The browser that your viewers
-            use to see it is not built by you. The protocols that carry your
-            data across the wire are not designed by you.
+            <strong>Edge cache</strong> helps with requests by a geographically
+            close group of users and can greatly reduce server load while
+            improving response times in distant countries.
           </p>
           <br />
-          <p>You will always depend on other people's work. Embrace that!</p>
+          <p>
+            Pick a lower TTL to reduce the chance of outdated content, or a
+            higher TTL for better cache effectiveness, but be ready to change
+            URLs, open incognito windows, and purge cache.
+          </p>
         </article>
 
         <div class="separator">

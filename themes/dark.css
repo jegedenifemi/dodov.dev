@@ -1,0 +1,126 @@
+:root {
+    --darkBodyBg: rgb(37, 37, 37);
+    --darkBg: rgb(30, 30, 30);
+    --darkLinks: rgb(78, 201, 176);
+    --darkLinksHover: rgb(78, 148, 206);
+    --darkSeparator: rgb(106, 153, 85);
+    --darkText: rgb(212, 212, 212);
+    --darkHeadings: rgb(181, 181, 181);
+    --darkNumbers: rgb(124, 124, 124);
+    }
+
+    body {
+        background-color: var(--darkBodyBg);
+        color: var(--darkText);
+      }
+    
+      a {
+        color: var(--darkLinks);
+      }
+      a:hover {
+        color: var(--darkLinksHover);
+      }
+    
+      nav ul .home {
+        background-color: var(--darkBg);
+      }
+    
+      .main {
+        background-color: var(--darkBg);
+        
+      }
+      
+      .main .num_line a {
+        color: var(--darkNumbers);
+      }
+      
+      .main .num_line a:hover {
+        color: var(--darkText);
+      }
+      
+      .separator span {
+        color: var(--darkSeparator);
+      }
+    
+      .separator hr {
+        border-bottom: 1.9px dashed var(--darkSeparator);
+      }
+      
+      
+      .foot_links li,
+      .link {
+        color: var(--darkLinks);
+      }
+      .foot_theme select {
+        color: var(--darkText);
+        background-color: inherit;
+      }
+      .foot_theme select:hover {
+        color: var(--darkLinksHover);
+      }
+      .foot_theme option {
+        background-color: inherit;
+      }
+      
+      .second-content2 a,
+      .third-content2 a,
+      .fourth-content2 a {
+        color: var(--darkText);
+      }
+      
+      .second-content2 a:hover,
+      .third-content2 a:hover,
+      .fourth-content2 a:hover {
+        color: var(--darkLinksHover);
+      }
+      .read-more-section a {
+        color: var(--darkText);
+          }
+      
+      .read-more-section a:hover {
+        color: var(--darkLinksHover);
+      }
+      
+      
+      .read-more-section a,
+      .read-more-section2 a {
+    
+        color: var(--darkText);
+      }
+      
+      .read-more-section a:hover,
+      .read-more-section2 a:hover {
+        color: var(--darkLinksHover);
+      }
+      
+      .fa-sharp:hover {
+        color: var(--darkLinksHover);
+      }
+      
+      .separator2 span {
+        color: var(--darkSeparator);
+      }
+      .separator2 hr {
+        border-bottom: 1.9px dashed var(--darkSeparator);
+      }
+      
+      .no-underline-a {
+        color: var(--darkText);
+      }
+      
+      .fifth-content2 a:hover {
+        color: var(--darkLinksHover);
+      }
+      
+      .separator3 span {
+        color: var(--darkSeparator);
+      }
+
+      .separator3 hr {
+        border-bottom: 1.9px dashed var(--darkSeparator);
+      }
+
+      .dont_build {
+        background-color: var(--darkBg);
+      }
+      

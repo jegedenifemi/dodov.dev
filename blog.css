@@ -3,7 +3,7 @@ nav ul .home {
   pointer-events: visible;
 }
 nav ul .blog {
-  background-color: var(--darkBg);
+  background-color: var(--Bg);
 }
 .blog,
 .blog a {

@@ -1,4 +1,3 @@
-
 // const textarea=document.querySelector('textarea')
 // const lineNumbers=document.querySelector('.line-numbers')
 
@@ -65,3 +64,10 @@ active.addEventListener('click', function onClick() {
 });
 
 */
+
+// THEME CHANGE ON DROPDOWN SELECT
+const setTheme = (theme) => (document.documentElement.className = theme);
+
+document.getElementById("theme_select").addEventListener("change", function () {
+  setTheme(this.value);
+});

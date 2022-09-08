@@ -17,13 +17,17 @@
     <div class="wrapper">
       <nav>
         <ul>
-            <li class="home"><a href="index.html">home</a></li>
-            <li class="blog"><a href="blog.html">blog</a></li>
-            <li class="projects"><a href="projects.html">projects</a></li>
-            <em><li class="dont_build">
+          <li class="home"><a href="index.html">home</a></li>
+          <li class="blog"><a href="blog.html">blog</a></li>
+          <li class="projects"><a href="projects.html">projects</a></li>
+          <em
+            ><li class="dont_build">
               ghostmask
-              <a href="projects.html" class="tab_close" title="Close Article">x</a>
-            </li></em>
+              <a href="projects.html" class="tab_close" title="Close Article"
+                >x</a
+              >
+            </li></em
+          >
         </ul>
       </nav>
 
@@ -44,18 +48,22 @@
         </div>
 
         <div class="ghostmask">
-            <div id="modal1" class="ghostmask-image modal1">
-              <a href="ghostmask.html"><img src="./img/ghostmask-logo.svg" class="img" alt=""></a>
-            </div>
-            <div class="ghostmask-text">
-              <h1 class="ghostmask-head">GhostMask</h1>
-              <p class="ghostmask-paragraph">
-                Browser extension for displaying and manipulating design files directly in the browser.
-              </p>
-              <a href="chrome.google.com" class="ghostmask-link">chrome.google.com</a>
-            </div>
+          <div id="modal1" class="ghostmask-image modal1">
+            <a href="ghostmask.html"
+              ><img src="./img/ghostmask-logo.svg" class="img" alt=""
+            /></a>
           </div>
-
+          <div class="ghostmask-text">
+            <h1 class="ghostmask-head">GhostMask</h1>
+            <p class="ghostmask-paragraph">
+              Browser extension for displaying and manipulating design files
+              directly in the browser.
+            </p>
+            <a href="chrome.google.com" class="ghostmask-link"
+              >chrome.google.com</a
+            >
+          </div>
+        </div>
 
         <div class="separator">
           <span>//</span>
@@ -74,14 +82,17 @@
           </ul>
 
           <div class="foot_theme">
-            <select name="theme" id="">
-              <option value="dark">Dark +</option>
-              <option value="light">Light +</option>
-              <option value="monokai">Monokai</option>
-              <option value="g-dark">GitHub Dark</option>
-              <option value="g-light">GitHub Light</option>
-              <option value="slrzd light">Solarized Light</option>
-            </select>
+            <label>
+              ↓
+              <select name="theme_select" id="theme_select">
+                <option value="dark">Dark+</option>
+                <option value="light">Light+</option>
+                <option value="monokai">Monokai</option>
+                <option value="g-dark">GitHub Dark</option>
+                <option value="g-light">GitHub Light</option>
+                <option value="solarized">Solarized Light</option>
+              </select>
+            </label>
           </div>
         </div>
       </div>

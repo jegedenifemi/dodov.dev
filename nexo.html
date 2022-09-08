@@ -7,7 +7,7 @@
     <title>Hristiyan Dodov: Full-Stack Developer at Oblik Studio</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./projects.css" />
-    <link rel="stylesheet" href="./build.css" />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -17,13 +17,17 @@
     <div class="wrapper">
       <nav>
         <ul>
-            <li class="home"><a href="index.html">home</a></li>
-            <li class="blog"><a href="blog.html">blog</a></li>
-            <li class="projects"><a href="projects.html">projects</a></li>
-            <li class="dont_build">
+          <li class="home"><a href="index.html">home</a></li>
+          <li class="blog"><a href="blog.html">blog</a></li>
+          <li class="projects"><a href="projects.html">projects</a></li>
+          <em
+            ><li class="dont_build">
               nexo
-              <a href="projects.html" class="tab_close" title="Close Article">x</a>
-            </li>
+              <a href="projects.html" class="tab_close" title="Close Article"
+                >x</a
+              >
+            </li></em
+          >
         </ul>
       </nav>
 
@@ -44,17 +48,18 @@
         </div>
 
         <div class="nexo">
-            <div class="nexo-image">
-              <a href="nexo.html"><img src="./img/Nexo.svg" alt=""></a>
-            </div>
-            <div class="nexo-text">
-              <h1 class="nexo-head">Nexo</h1>
-              <p class="nexo-paragraph">
-                Developing and maintaining the product marketing website of the world's first crypto-backed loans.
-              </p>
-              <a href="nexo.io" class="nexo-link">nexo.io</a>
-            </div>
+          <div class="nexo-image">
+            <img src="./img/Nexo.svg" alt="" />
           </div>
+          <div class="nexo-text">
+            <h1 class="nexo-head">Nexo</h1>
+            <p class="nexo-paragraph">
+              Developing and maintaining the product marketing website of the
+              world's first crypto-backed loans.
+            </p>
+            <a href="nexo.io" class="nexo-link">nexo.io</a>
+          </div>
+        </div>
 
         <div class="separator">
           <span>//</span>
@@ -73,14 +78,17 @@
           </ul>
 
           <div class="foot_theme">
-            <select name="theme" id="">
-              <option value="dark">Dark +</option>
-              <option value="light">Light +</option>
-              <option value="monokai">Monokai</option>
-              <option value="g-dark">GitHub Dark</option>
-              <option value="g-light">GitHub Light</option>
-              <option value="slrzd light">Solarized Light</option>
-            </select>
+            <label>
+              ↓
+              <select name="theme_select" id="theme_select">
+                <option value="dark">Dark+</option>
+                <option value="light">Light+</option>
+                <option value="monokai">Monokai</option>
+                <option value="g-dark">GitHub Dark</option>
+                <option value="g-light">GitHub Light</option>
+                <option value="solarized">Solarized Light</option>
+              </select>
+            </label>
           </div>
         </div>
       </div>

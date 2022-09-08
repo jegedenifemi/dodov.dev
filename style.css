@@ -1,12 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Noto+Sans:ital,wght@0,100;0,200;0,400;0,500;1,100;1,200&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-button {
-  cursor: pointer;
-}
+
 
 body {
   font-family: "Fira Code", monospace;
@@ -30,6 +30,8 @@ nav {
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
 }
 
 nav::-webkit-scrollbar {
@@ -55,12 +57,17 @@ nav li {
   font-size: small;
 }
 
+
 nav li a {
   color: #a3a3a3;
   text-decoration: none;
 }
+
+nav li a,
+
 nav li a:hover {
   color: #a3a3a3;
+  text-decoration: none;
 }
 
 nav ul .home {
@@ -73,7 +80,7 @@ nav ul .home {
 
 .main {
   padding-block: 1.5rem;
-  height: 250vh;
+  /* height: 250vh; */
   width: 100%;
   height: fit-content;
   padding-inline: 5rem;
@@ -81,7 +88,7 @@ nav ul .home {
 }
 .main .num_line {
   position: absolute;
-  left: 2rem;
+  left: 1.5rem;
   font-size: 17px;
   text-align: right;
 }
@@ -140,11 +147,13 @@ nav ul .home {
   background-color: inherit;
   -moz-appearance: none;
   -webkit-appearance: none;
+  width: fit-content;
   cursor: pointer;
 }
 
 .foot_theme option {
-  background-color: inherit;
+  background-color: var(--darkBg);
+  color: var(--darkText);
 }
 
 /* HOME STYLING */
@@ -322,6 +331,7 @@ nav ul .home {
 .fifth-content1 img {
   height: 85px;
 }
+
 .fifth-content2 p {
   font-size: 16px;
 }
@@ -350,6 +360,28 @@ nav ul .home {
 }
 
 /* BLOG BLOG BLOG BLOG BLOG BLOG */
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-text h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.imaged img {
+  width: 64px;
+  height: 360px;
+}
 
 /* PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS */
 

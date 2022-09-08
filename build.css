@@ -9,10 +9,11 @@ nav ul .home {
 }
 
 .home a:visited {
-  color: #a3a3a3
+  color: #a3a3a3;
 }
 .dont_build {
   background-color: var(--darkBg);
+  font-style: italic;
   padding-right: 1rem;
   color: white;
 }
@@ -34,6 +35,10 @@ nav ul .home {
   width: 95%;
   color: rgb(204, 202, 202);
 }
+.browser_header_left h1,
+.browser_header_left p {
+  width: 100% !important;
+}
 
 .header_left p {
   width: 70%;
@@ -47,7 +52,7 @@ nav ul .home {
 article {
   margin-bottom: 1.5rem;
 }
-article > img {
+article img {
   cursor: zoom-in;
   width: 100%;
   margin-block: 1.5rem 1.4rem;
@@ -92,17 +97,61 @@ article h2 {
   margin-block: 3rem 1.4rem;
   font-weight: 700;
 }
-blockquote {
+figcaption {
+  font-size: 14px;
+  text-align: center;
+  opacity: 0.75;
+}
+blockquote p {
   display: flex;
   overflow: hidden;
 }
-blockquote::before {
+blockquote p::before {
   content: "> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >";
   width: 1ch;
   color: var(--darkLinks);
   line-height: 1.5rem;
   height: 1.5rem;
   margin-right: 2ch;
+}
+.browser_green p {
+  position: relative;
+}
+.browser_green p strong {
+  position: absolute;
+  bottom: -0.1rem;
+  left: 1.7rem;
+}
+.browser_green p::before {
+  color: rgb(114, 137, 104);
+}
+
+.code_block {
+  margin: 0.5rem -5rem;
+  padding: 1.5rem 5rem;
+  background-color: rgb(28, 28, 28);
+  width: 100vw;
+  overflow-x: scroll;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.code_block code {
+  color: inherit;
+  min-width: fit-content;
+  white-space: nowrap;
+}
+ol {
+  counter-reset: count;
+  list-style: none;
+}
+ol li {
+  display: flex;
+}
+ol li::before {
+  counter-increment: count;
+  content: counter(count) ".";
+  color: var(--darkLinks);
+  margin-right: 1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -142,5 +191,10 @@ blockquote::before {
   }
   .foot_links span {
     display: none;
+  }
+
+  .code_block {
+    margin: 0.5rem -3rem;
+    padding: 1.5rem 3rem;
   }
 }

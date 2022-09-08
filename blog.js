@@ -53,21 +53,3 @@ clickZoom2.onclick = () => {
     }
   };
 };
-
-/* code snippet to change a link color when clicked
-
-const active = document.getElementById('active');
-
-active.addEventListener('click', function onClick() {
-  active.style.color = 'white';
-
-});
-
-*/
-
-// THEME CHANGE ON DROPDOWN SELECT
-const setTheme = (theme) => (document.documentElement.className = theme);
-
-document.getElementById("theme_select").addEventListener("change", function () {
-  setTheme(this.value);
-});

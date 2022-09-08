@@ -81,7 +81,7 @@ article img {
 }
 .modal1 img,
 .modal2 img {
-  width: 63rem;
+  width: 75vw;
   cursor: zoom-in;
 }
 .bullet {
@@ -184,6 +184,10 @@ ol li::before {
   }
   article {
     max-width: 380px;
+  }
+  .modal1 img,
+  .modal2 img {
+    width: 90vw;
   }
   .foot {
     gap: 1.5rem;

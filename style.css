@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Noto+Sans:ital,wght@0,100;0,200;0,400;0,500;1,100;1,200&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 :root {
   /* DARK+ THEME */
   --darkBodyBg: rgb(37, 37, 37);
@@ -89,6 +92,8 @@ nav {
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
 }
 nav::-webkit-scrollbar {
   display: none;
@@ -125,7 +130,7 @@ nav ul .home {
 
 .main {
   padding-block: 1.5rem;
-  height: 250vh;
+  /* height: 250vh; */
   width: 100%;
   height: fit-content;
   background-color: var(--darkBg);
@@ -200,13 +205,15 @@ nav ul .home {
   background-color: inherit;
   -moz-appearance: none;
   -webkit-appearance: none;
+  width: fit-content;
   cursor: pointer;
 }
 .foot_theme select:hover {
   color: var(--darkLinksHover);
 }
 .foot_theme option {
-  background-color: inherit;
+  background-color: var(--darkBg);
+  color: var(--darkText);
 }
 
 /* HOME STYLING */
@@ -441,7 +448,6 @@ nav ul .home {
   right: 0;
   top: 50%;
 }
-
 
 /* BLOG BLOG BLOG BLOG BLOG BLOG */
 

@@ -271,6 +271,7 @@
               "I can't see it."<br />
               "Have you cleared your browser cache?" <br />
               "Yes. It's still not visible."<br />
+              &MediumSpace;
               <strong><em>"Hmmm…"</em></strong>
             </p>
           </blockquote>
@@ -397,78 +398,84 @@
             even if you pick a way too long TTL, you can change the URL to the
             resource and trigger a fresh request-response cycle:
           </p>
-
-          <div></div>
-
-          <h2>Launch Early</h2>
-          <p>
-            On the off-chance that you really want or have to build something,
-            launch it as soon as you can. As David Heinemeier Hansson said on
-            <span class="link">episode "Launch Now" of the Rework podcast</span
-            >:
-          </p>
-          <br />
-          <blockquote>
-            <p>
-              If you're not uncomfortable by the time you're launching, it's way
-              too late.
-            </p>
-          </blockquote>
-
           <br />
 
-          <p>
-            I never really launched my side project. It wasn't "ready". At the
-            same time, it became a bigger and bigger dependency in our main
-            projects. That's an issue, because you're building on top of
-            something that isn't validated by other people. If I had shared it,
-            maybe people would have helped out and given ideas for improvements.
-            Or, maybe people would have critiqued it and made me question
-            whether it's valuable.
-          </p>
+          <div class="code_block">
+            <code
+              >https://example.com/about-us/image.jpg<strong
+                >?version=2</strong
+              ></code
+            >
+          </div>
           <br />
           <p>
-            And that's what I was most afraid of — that the project isn't
-            valuable. But no matter how much effort you put into something, you
-            still can't know for sure if it's valuable until other people give
-            their own points of view. That's why it's better to launch as soon
-            as possible:
+            However, if you've chosen to cache the HTML content of your pages as
+            well, you'd have to get around that too, since changing the image
+            URL means changing the HTML. So you'd have to change the page URL as
+            well:
           </p>
-
           <br />
 
+          <div class="code_block">
+            <code>https://example.com/about-us<strong>?version=2</strong></code>
+          </div>
+          <br />
+          <p>
+            This is where things get tricky, because even if your web framework
+            can easily change all links to the updated page, every other site on
+            the internet also has to do it. That's impossible, so you have to
+            pick a window of time that you're comfortable with and in which
+            users may see outdated content.
+          </p>
+          <br />
+          <p>If you have the following setup:</p>
+          <br />
           <ul>
             <li class="list_items">
               <div>
-                <p>
-                  If you've built something valuable, you'll get more
-                  like-minded people to help you out with it
-                </p>
+                <p>Browser cache TTL: <strong>30 minutes</strong></p>
               </div>
             </li>
             <li class="list_items">
               <div>
-                <p>
-                  If you've built something pointless, you'll save time and
-                  probably learn about new and better approaches
-                </p>
+                <p>Edge cache TTL: <strong>1 minute</strong></p>
               </div>
             </li>
           </ul>
-
           <br />
-
+          <p>…there are several possible outcomes:</p>
           <br />
-          <ul>
-            <li class="list_items">
-              <div><p>It had its own opinion on design</p></div>
+          <ol>
+            <li>
+              <p>
+                If a change happened over 30 minutes ago, both caches would have
+                expired and it's guaranteed that the user will see the updated
+                version.
+              </p>
             </li>
-            <li class="list_items">
-              <div>
-                <p>It didn't meet my requirements for "smoothness"</p>
-              </div>
+            <br />
+            <li>
+              <p>
+                If a change happened over 1 minute ago, only the edge cache is
+                guaranteed to have expired. If a user has seen the page within
+                the last 30 minutes and is cached by their browser, they can see
+                the change by clearing their browser cache, opening an incognito
+                window, or doing a <a href="#" class="link">hard reload</a> .
+              </p>
             </li>
-          </ul>
+            <br />
+            <li>
+              <p>
+                If a change happened less than 1 minute ago, both caches would
+                still be considered fresh. Users will not be able to see the
+                update, even if they clear their browser cache, because the
+                closest edge server would still return the old version. The only
+                solution here is for the website owner to prematurely force the
+                cache to become stale by
+                <a href="#" class="link">purging it</a>.
+              </p>
+            </li>
+          </ol>
 
           <h2>Conclusion</h2>
           <p>

@@ -2,20 +2,33 @@ img{
     width: 180px;
     height: 110px;
   }
+  body {
+    font-family: "Fira Code", monospace;
+    background-color: var(--darkBodyBg);
+    color: var(--darkText);
+  }
+  
+a {
+  color: var(--darkLinks);
+  cursor: pointer;
+}
+a:hover {
+  color: var(--darkLinksHover);
+}
   .flex{
     display: flex;
     gap: 1rem;
   }
   .num_line h3{
-    color: white;
+    /* color: white; */
     width: 500px;
   }
   .num_line a{
     text-decoration: none;
-    color: white;
+    /* color: white; */
   }
   .num_line p{
-    color: white;
+    /* color: white; */
     width: 500px;
     text-align: left;
   }
@@ -24,11 +37,20 @@ img{
     text-align: left;
   }
   h3:hover{
-    color: blue;
+    color: var(--darkLinksHover);
   }
   .hero{
     position: absolute;
     top: 0rem;
     left: 2rem;
     ;
+  }
+  .main {
+    padding-block: 1.5rem;
+    height: 250vh;
+    width: 100%;
+    min-height: fit-content;
+    background-color: var(--darkBg);
+    padding-inline: 5rem;
+    position: relative;
   }

@@ -1,0 +1,125 @@
+:root { 
+    --lightBodyBg: rgb(243, 243, 243);
+    --lightBg: rgb(255, 255, 255);
+    --lightLinks: rgb(78, 126, 139);
+    --lightLinksHover: rgb(38, 101, 210);
+    --lightSeparator: rgb(43, 97, 43);
+    --lightText: black;
+    --lightHeadings: rgb(0, 0, 0);
+    --lightNumbers: rgb(92, 138, 154); 
+    }
+
+    body {
+        background-color: var(--lightBodyBg);
+        color: var(--lightText);
+      }
+    
+      a {
+        color: var(--lightLinks);
+      }
+      a:hover {
+        color: var(--lightLinksHover);
+      }
+    
+      nav ul .home {
+        background-color: var(--lightBg);
+      }
+    
+      .main {
+        background-color: var(--lightBg);
+        
+      }
+      
+      .main .num_line a {
+        color: var(--lightNumbers);
+      }
+      
+      .main .num_line a:hover {
+        color: var(--lightText);
+      }
+      
+      .separator span {
+        color: var(--lightSeparator);
+      }
+    
+      .separator hr {
+        border-bottom: 1.9px dashed var(--lightSeparator);
+      }
+      
+      
+      .foot_links li,
+      .link {
+        color: var(--lightLinks);
+      }
+      .foot_theme select {
+        color: var(--lightText);
+        background-color: inherit;
+      }
+      .foot_theme select:hover {
+        color: var(--lightLinksHover);
+      }
+      .foot_theme option {
+        background-color: inherit;
+      }
+      
+      .second-content2 a,
+      .third-content2 a,
+      .fourth-content2 a {
+        color: var(--lightText);
+      }
+      
+      .second-content2 a:hover,
+      .third-content2 a:hover,
+      .fourth-content2 a:hover {
+        color: var(--lightLinksHover);
+      }
+      .read-more-section a {
+        color: var(--lightText);
+          }
+      
+      .read-more-section a:hover {
+        color: var(--lightLinksHover);
+      }
+      
+      
+      .read-more-section a,
+      .read-more-section2 a {
+    
+        color: var(--lightText);
+      }
+      
+      .read-more-section a:hover,
+      .read-more-section2 a:hover {
+        color: var(--lightLinksHover);
+      }
+      
+      .fa-sharp:hover {
+        color: var(--lightLinksHover);
+      }
+      
+      .separator2 span {
+        color: var(--lightSeparator);
+      }
+      .separator2 hr {
+        border-bottom: 1.9px dashed var(--lightSeparator);
+      }
+      
+      .no-underline-a {
+        color: var(--lightText);
+      }
+      
+      .fifth-content2 a:hover {
+        color: var(--lightLinksHover);
+      }
+      
+      .separator3 span {
+        color: var(--lightSeparator);
+      }
+      .separator3 hr {
+        border-bottom: 1.9px dashed var(--lightSeparator);
+      }
+
+      .dont_build {
+        background-color: var(--lightBg);
+      }
+      

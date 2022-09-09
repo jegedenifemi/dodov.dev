@@ -11,72 +11,84 @@
   :root.dark {
   --BodyBg: rgb(37, 37, 37);
   --Bg: rgb(30, 30, 30);
+  --NavBg: rgb(45, 45, 45);
   --Links: rgb(116, 182, 168);
   --LinksHover: rgb(78, 148, 206);
   --Separator: rgb(106, 153, 85);
   --Text: rgb(187, 187, 187);
   --Headings: rgb(181, 181, 181);
   --Numbers: rgb(124, 124, 124);
+  --activeText: rgba(255, 255, 255, 0.945);
 }
 
 /* LIGHT+ THEME */
 :root.light {
   --BodyBg: rgb(243, 243, 243);
   --Bg: rgb(255, 255, 255);
+  --NavBg: rgb(236, 236, 236);
   --Links: rgb(78, 126, 139);
   --LinksHover: rgb(38, 101, 210);
   --Separator: rgb(43, 97, 43);
   --Text: black;
   --Headings: rgb(0, 0, 0);
   --Numbers: rgb(92, 138, 154);
+  --activeText: rgba(0, 0, 0, 0.849);
 }
 
 /* MONOKAI THEME */
 :root.monokai {
   --BodyBg: rgb(30, 30, 28);
   --Bg: rgb(39, 40, 34);
+  --NavBg: rgb(52, 53, 47);
   --Links: rgb(173, 205, 108);
   --LinksHover: var(--LinksHover);
   --Separator: (134, 132, 120);
   --Text: rgb(242, 243, 237);
   --Headings: rgb(247, 248, 242);
   --Numbers: rgb(143, 144, 138);
+  --activeText: rgba(255, 255, 255, 0.945);
 }
 
 /* GITHUB  */
 :root.g-dark {
   --BodyBg: rgb(27, 30, 35);
-  --Bg: rgb(36, 41, 45);
+  --Bg: rgb(36, 41, 46);
+  --NavBg: rgb(31, 36, 40);
   --Links: rgb(176, 201, 221);
   --LinksHover: var(--LinksHover);
   --Separator: rgb(108, 114, 122);
   --Text: rgb(225, 228, 233);
   --Headings: rgb(225, 228, 233);
   --Numbers: rgb(121, 131, 141);
+  --activeText: rgba(255, 255, 255, 0.945);
 }
 
 /* GITHUB LIGHT */
 :root.g-light {
   --BodyBg: rgb(247, 248, 250);
   --Bg: rgb(255, 255, 255);
+  --NavBg: rgb(239, 242, 247);
   --Links: rgb(63, 88, 117);
   --LinksHover: var(--LinksHover);
   --Separator: rgb(109, 114, 119);
   --Text: rgb(64, 65, 68);
   --Headings: rgb(37, 41, 45);
   --Numbers: rgb(187, 187, 187);
+  --activeText: rgba(0, 0, 0, 0.849);
 }
 
 /* SOLARIZED LIGHT */
 :root.solarized {
   --BodyBg: rgb(239, 232, 213);
   --Bg: rgb(253, 246, 227);
+  --NavBg: rgb(228, 221, 202);
   --Links: rgb(70, 131, 169);
   --LinksHover: var(--LinksHover);
   --Separator: rgb(109, 114, 119);
   --Text: rgb(61, 57, 45);
   --Headings: rgb(77, 75, 68);
   --Numbers: rgb(112, 141, 140);
+  --activeText: rgba(0, 0, 0, 0.849);
 }
 
 body {
@@ -118,7 +130,7 @@ nav ul {
   min-width: fit-content;
 }
 nav li {
-  background-color: rgb(45, 45, 45);
+  background-color: var(--NavBg);
   padding: 0.6rem 4rem 0.4rem 0.7rem;
   min-width: max-content;
   text-align: left;
@@ -127,16 +139,16 @@ nav li {
 }
 nav a,
 nav a:hover {
-  color: #a3a3a3;
+  color: var(--Text);
   text-decoration: none;
 }
 nav ul .home {
-  background-color: var(--Bg);
   pointer-events: none;
 }
 
-.home a:visited {
-  color: white;
+.active_tab {
+  background-color: var(--Bg);
+  color: var(--activeText);
 }
 
 .main {
@@ -206,6 +218,9 @@ nav ul .home {
   text-underline-offset: 5px;
   color: var(--Links);
 }
+.foot_theme {
+  position: relative;
+}
 .foot_theme select {
   color: var(--Text);
   font-weight: 600;
@@ -219,12 +234,20 @@ nav ul .home {
   width: fit-content;
   cursor: pointer;
 }
-.foot_theme select:hover {
+.foot_theme:hover select,
+.foot_theme select:hover,
+.foot_theme:hover {
   color: var(--LinksHover);
 }
 .foot_theme option {
   background-color: var(--Bg);
   color: var(--Text);
+}
+.theme_arrow {
+  font-weight: 600;
+  position: absolute;
+  right: 0.3rem;
+  cursor: pointer;
 }
 
 /* HOME STYLING */

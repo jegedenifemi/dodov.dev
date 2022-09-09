@@ -1,93 +1,51 @@
-img{
-    width: 180px;
-    height: 110px;
-  }
-  body {
-    font-family: "Fira Code", monospace;
-    background-color: var(--darkBodyBg);
-    color: var(--darkText);
-  }
-  
-a {
-  color: var(--darkLinks);
-  cursor: pointer;
+img {
+  width: 160px;
+  height: 90px;
 }
-a:hover {
-  color: var(--darkLinksHover);
+.hero > div:first-child {
+  margin-bottom: 1rem;
 }
-  .flex{
-    display: flex;
-    gap: 1rem;
-  }
-  .num_line h3{
-    /* color: white; */
-    width: 500px;
-  }
-  .num_line a{
-    text-decoration: none;
-    /* color: white; */
-  }
-  .num_line p{
-    /* color: white; */
-    width: 500px;
-    text-align: left;
-  }
-  h3{
-    font-size: 11;
-    text-align: left;
-  }
-  h3:hover{
-    color: var(--darkLinksHover);
-  }
-  .hero{
-    position: absolute;
-    top: 0rem;
-    left: 2rem;
-    ;
-  }
-  .main {
-    padding-block: 1.5rem;
-    height: 250vh;
-    width: 100%;
-    min-height: fit-content;
-    background-color: var(--darkBg);
-    padding-inline: 5rem;
-    position: relative;
-  }
-
+.flex a {
+  text-decoration: none;
+  color: inherit;
+}
+.flex a:hover {
+  color: var(--LinksHover);
+}
+.flex {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+.hero :nth-child(4) p:last-child {
+  margin-top: 0rem;
+}
+.flex p:last-child {
+  font-size: 13px;
+  margin-top: 1rem;
+}
+.num_line a {
+  text-decoration: none;
+}
+/* .num_line p {
+  width: 500px;
+  text-align: left;
+} */
+h3 {
+  font-size: 11;
+  text-align: left;
+}
 nav ul .home {
   background-color: rgb(45, 45, 45);
   pointer-events: visible;
-}
-nav ul .blog {
-  background-color: var(--Bg);
 }
 .blog,
 .blog a {
   color: white;
   cursor: default;
 }
-/* .num_line h3 {
-  color: white;
-  width: 500px;
-} */
+
 .num_line a {
   text-decoration: none;
   color: white;
 }
-/* .num_line p {
-  color: white;
-  width: 500px;
-  text-align: left;
-} */
-/* h3 {
-  font-size: 11;
-  text-align: left;
-} */
-
-/* .hero {
-  position: absolute;
-  top: 0rem;
-  left: 2rem;
-} */
-

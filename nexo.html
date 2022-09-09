@@ -7,7 +7,7 @@
     <title>Hristiyan Dodov: Full-Stack Developer at Oblik Studio</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./projects.css" />
-    
+
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -17,12 +17,12 @@
     <div class="wrapper">
       <nav>
         <ul>
-          <li class="home"><a href="index.html">home</a></li>
-          <li class="blog"><a href="blog.html">blog</a></li>
-          <li class="projects"><a href="projects.html">projects</a></li>
+          <a href="./index.html"><li class="home">home</li></a>
+          <a href="./blog.html"><li class="blog">blog</li></a>
+          <a href="./projects.html"><li class="projects">projects</li></a>
           <em
-            ><li class="dont_build">
-              nexo
+            ><li class="active_tab">
+              nexo &MediumSpace;
               <a href="projects.html" class="tab_close" title="Close Article"
                 >x</a
               >
@@ -78,17 +78,15 @@
           </ul>
 
           <div class="foot_theme">
-            <label>
-              ↓
-              <select name="theme_select" id="theme_select">
-                <option value="dark">Dark+</option>
-                <option value="light">Light+</option>
-                <option value="monokai">Monokai</option>
-                <option value="g-dark">GitHub Dark</option>
-                <option value="g-light">GitHub Light</option>
-                <option value="solarized">Solarized Light</option>
-              </select>
-            </label>
+            <select name="theme_select" id="theme_select">
+              <option value="dark">Dark+</option>
+              <option value="light">Light+</option>
+              <option value="monokai">Monokai</option>
+              <option value="g-dark">GitHub Dark</option>
+              <option value="g-light">GitHub Light</option>
+              <option value="solarized">Solarized Light</option>
+            </select>
+            <span class="theme_arrow">↓</span>
           </div>
         </div>
       </div>

@@ -2,20 +2,12 @@ header {
   display: flex;
   justify-content: space-between;
 }
-nav ul .home {
-  background-color: rgb(45, 45, 45);
-  color: unset;
-  pointer-events: visible;
-}
-
 .home a:visited {
   color: #a3a3a3;
 }
 .dont_build {
-  background-color: var(--Bg);
   font-style: italic;
-  padding-right: 1rem;
-  color: white;
+  padding-right: 0.5rem;
 }
 .tab_close {
   outline: none;

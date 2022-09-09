@@ -85,7 +85,7 @@
   }
   p {
     line-height: 1.4rem;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   nav {
@@ -242,6 +242,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     cursor: pointer;
+    
   }
   .foot_theme select:hover {
     color: var(--darkLinksHover);
@@ -249,11 +250,15 @@
   .foot_theme option {
     background-color: inherit;
   }
-
+  
+  .numbers {
+    visibility: hidden;
+  }
   @media (min-width: 670px) and (max-width: 930px) {
     #first-content-container {
       flex-direction: column;
     }
+    
 
     .wrapper {
         width: 85%;
@@ -289,11 +294,14 @@
     body {
         font-family: "Fira Code", monospace;
         background-color:var(--darkBodyBg);
-        ;
+        
       }
   
     nav li {
       padding-right: 4vw;
+      display: flex;
+      flex-direction: column;
+      background-color: red;
     }
     .main {
       padding-inline: 3rem 1rem;
@@ -314,10 +322,13 @@
     .foot,
     .foot_links {
       flex-direction: column;
+      justify-content: space-between;
     }
     .foot_links span {
       display: none;
     }
+
+   
     
   }
 
@@ -326,7 +337,9 @@
     #first-content-container {
       flex-direction: column;
     }
-
+    .numbers {
+      visibility: visible;
+    }
     .wrapper {
         width: 90%;
         margin: 0;

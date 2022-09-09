@@ -36,12 +36,12 @@ h3 {
   text-align: left;
 }
 nav ul .home {
-  background-color: rgb(45, 45, 45);
+  /* background-color: rgb(45, 45, 45); */
   pointer-events: visible;
 }
 .blog,
 .blog a {
-  color: white;
+  /* color: white; */
   cursor: default;
 }
 

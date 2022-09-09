@@ -7,6 +7,11 @@
   margin-bottom: 2%;
   /* height: 10%; */
 }
+.active_tab:not(.projects) {
+  display: flex;
+  gap: 2rem;
+  padding-right: 1rem;
+}
 
 .header {
   margin-bottom: 3%;
@@ -34,11 +39,11 @@ img {
   width: 90%;
 }
 
-
 .nexo-head,
 .rundown-head,
 .ghostmask-head,
 .oblik-head {
   text-decoration: none;
+  font-size: large;
+  color: inherit;
 }
-  

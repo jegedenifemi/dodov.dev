@@ -96,7 +96,8 @@ body {
   background-color: var(--BodyBg);
   color: var(--Text);
 }
-a {
+a,
+.theme_arrow {
   color: var(--Links);
   cursor: pointer;
 }
@@ -231,22 +232,26 @@ nav ul .home {
   background-color: inherit;
   -moz-appearance: none;
   -webkit-appearance: none;
-  width: fit-content;
+  width: 4.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
   cursor: pointer;
 }
 .foot_theme:hover select,
+.foot_theme:hover .theme_arrow,
 .foot_theme select:hover,
 .foot_theme:hover {
   color: var(--LinksHover);
 }
 .foot_theme option {
   background-color: var(--Bg);
+  /* text-overflow: ellipsis; */
   color: var(--Text);
 }
 .theme_arrow {
   font-weight: 600;
   position: absolute;
-  right: 0.3rem;
+  right: -0.3rem;
   cursor: pointer;
 }
 

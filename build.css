@@ -7,8 +7,10 @@ header {
 }
 .dont_build {
   font-style: italic;
+  font-weight: bold;
   padding-right: 0.5rem;
 }
+
 .tab_close {
   outline: none;
   border: none;

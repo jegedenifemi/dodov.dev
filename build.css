@@ -16,7 +16,9 @@ nav ul .home {
   font-style: italic;
   padding-right: 1rem;
   color: white;
+  font-weight: bold;
 }
+
 .tab_close {
   outline: none;
   border: none;

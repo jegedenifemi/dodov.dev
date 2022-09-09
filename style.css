@@ -128,6 +128,10 @@ nav ul .home {
   color: white;
 }
 
+.num-hidden {
+  display: none;
+}
+
 .main {
   padding-block: 1.5rem;
   /* height: 250vh; */
@@ -179,7 +183,7 @@ nav ul .home {
 /* FOOTER */
 .foot {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
   justify-content: space-between;
   margin-bottom: 90vh;
 }
@@ -255,6 +259,10 @@ nav ul .home {
   font-weight: 600;
 }
 
+.latest{
+  margin-bottom: 1.5rem;
+}
+
 .second-content1 a img,
 .third-content1 a img,
 .fourth-content1 a img {
@@ -302,14 +310,9 @@ nav ul .home {
   font-size: 13px;
 }
 
-.third-content1 a img,
-.fourth-content1 a img {
-  margin-top: 0.8rem;
-}
-
-.third-content2,
-.fourth-content2 {
-  margin-top: 0.7rem;
+#second-content-container,
+#third-content-container {
+  margin-top: 1rem;
 }
 
 .date {
@@ -318,7 +321,7 @@ nav ul .home {
 }
 
 .fourth-date {
-  margin-top: 1.6rem;
+  margin-top: 1.5rem;
   font-size: 13px;
 }
 
@@ -338,7 +341,7 @@ nav ul .home {
 }
 
 .read-more-section {
-  margin-top: 1.3rem;
+  margin-top: 1rem;
 }
 
 .read-more-section2 {
@@ -389,6 +392,11 @@ nav ul .home {
   top: 50%;
 }
 
+.project-header {
+  margin-top: 1.6rem;
+  margin-bottom: 2rem;
+}
+
 #fifth-content-container {
   margin-bottom: 2rem;
 }
@@ -432,7 +440,7 @@ nav ul .home {
   display: flex;
   gap: 1rem;
   position: relative;
-  margin-top: 1.5rem;
+  margin-top: 1.7rem;
 }
 
 .separator3 span {
@@ -459,13 +467,6 @@ header {
 .header-text h4 {
   font-size: 18px;
   font-weight: 500;
-}
-
-.date {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
 }
 
 .imaged img {
@@ -578,6 +579,8 @@ header {
 
   .project-header {
     font-size: 16px;
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
   }
 
   .date {
@@ -631,4 +634,53 @@ header {
   .read-more-section2 a {
     font-size: 15px;
   }
+
+  .num-hidden {
+    display: block;
+  }
+
+  .main {
+    height: 360vh;
+  }
+
+  #second-content-container,
+  #third-content-container {
+    margin-top: 2rem;
+  }
+
+  .separator{
+    margin-top: 1.7rem;
+  }
+
+  .latest{
+    margin-bottom: 2rem;
+  }
+
+  .fourth-content2{
+    margin-top: 1.8rem;
+  }
+
+  .second-content2, .third-content2{
+    margin-top: 1.6rem;
+  }
+
+  .read-more-section {
+    margin-top: 1.8rem;
+  }
+
+  .separator2{
+    margin-bottom: 1.7rem;
+    margin-top: 1.6rem;
+  }
+
+  .read-more-section2 {
+    padding-top: 0.5rem;
+  }
+
+  .foot{
+    margin-top: 1.8rem;
+    font-size: 14px;
+    line-height: 1.1rem;
+  }
+
 }

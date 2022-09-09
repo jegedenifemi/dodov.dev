@@ -23,13 +23,13 @@
     <div class="wrapper">
       <nav>
         <ul>
-          <li class="home"><a href="./index.html">home</a></li>
-          <li class="blog"><a href="./blog.html">blog</a></li>
-          <li class="dont_build">
+          <a href="./index.html"><li class="home">home</li></a>
+          <a href="./blog.html"><li class="blog">blog</li></a>
+          <li class="dont_build active_tab">
             dont-build-your-own-framework
             <a href="./blog.html" class="tab_close" title="Close Article">x</a>
           </li>
-          <li class="projects"><a href="./projects.html">projects</a></li>
+          <a href="./projects.html"><li class="projects">projects</li></a>
         </ul>
       </nav>
 
@@ -547,19 +547,20 @@
           </ul>
 
           <div class="foot_theme">
-            <select name="theme" id="theme">
-              <option value="dark" id="dark">Dark +</option>
-              <option value="light" id="light">Light +</option>
+            <select name="theme_select" id="theme_select">
+              <option value="dark">Dark+</option>
+              <option value="light">Light+</option>
               <option value="monokai">Monokai</option>
               <option value="g-dark">GitHub Dark</option>
               <option value="g-light">GitHub Light</option>
-              <option value="slrzd light">Solarized Light</option>
+              <option value="solarized">Solarized Light</option>
             </select>
+            <span class="theme_arrow">↓</span>
           </div>
         </div>
       </div>
     </div>
-
     <script src="./index.js"></script>
+    <script src="./blog.js"></script>
   </body>
 </html>

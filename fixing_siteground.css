@@ -1,0 +1,396 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    /* DARK+ THEME */
+    --darkBodyBg: rgb(37, 37, 37);
+    --darkBg: rgb(30, 30, 30);
+    --darkLinks: rgb(116, 182, 168);
+    --darkLinksHover: rgb(78, 148, 206);
+    --darkSeparator: rgb(106, 153, 85);
+    --darkText: rgb(187, 187, 187);
+    --darkHeadings: rgb(181, 181, 181);
+    --darkNumbers: rgb(124, 124, 124);
+  
+    /* LIGHT+ THEME */
+    --lightBodyBg: rgb(243, 243, 243);
+    --lightBg: rgb(255, 255, 255);
+    --lightLinks: rgb(78, 126, 139);
+    --lightLinksHover: rgb(38, 101, 210);
+    --lightSeparator: rgb(43, 97, 43);
+    --lightText: black;
+    --lightHeadings: rgb(0, 0, 0);
+    --lightNumbers: rgb(92, 138, 154);
+  
+    /* MONOKAI THEME */
+    --monokaiBodyBg: rgb(30, 30, 28);
+    --monokaiBg: rgb(39, 40, 34);
+    --monokaiLinks: rgb(173, 205, 108);
+    --monokaiLinksHover: var(--darkLinksHover);
+    --monokaiSeparator: rgb(134, 132, 120);
+    --monokaiText: rgb(242, 243, 237);
+    --monokaiHeadings: rgb(247, 248, 242);
+    --monokaiNumbers: rgb(143, 144, 138);
+  
+    /* GITHUB DARK */
+    --gitDarkBodyBg: rgb(27, 30, 35);
+    --gitDarkBg: rgb(36, 41, 45);
+    --gitDarkLinks: rgb(176, 201, 221);
+    --gitDarkLinksHover: var(--darkLinksHover);
+    --gitDarkSeparator: rgb(108, 114, 122);
+    --gitDarkText: rgb(225, 228, 233);
+    --gitDarkHeadings: rgb(225, 228, 233);
+    --gitDarkNumbers: rgb(121, 131, 141);
+  
+    /* GITHUB LIGHT */
+    --gitLightBodyBg: rgb(247, 248, 250);
+    --gitLightBg: rgb(255, 255, 255);
+    --gitLightLinks: rgb(63, 88, 117);
+    --gitLightLinksHover: var(--lightLinksHover);
+    --gitLightSeparator: rgb(109, 114, 119);
+    --gitLightText: rgb(64, 65, 68);
+    --gitLightHeadings: rgb(37, 41, 45);
+    --gitLightNumbers: rgb(187, 187, 187);
+  
+    /* SOLARIZED LIGHT */
+    --solarizedBodyBg: rgb(239, 232, 213);
+    --solarizedBg: rgb(253, 246, 227);
+    --solarizedLinks: rgb(70, 131, 169);
+    --solarizedLinksHover: var(--lightLinksHover);
+    --solarizedSeparator: rgb(109, 114, 119);
+    --solarizedText: rgb(61, 57, 45);
+    --solarizedHeadings: rgb(77, 75, 68);
+    --solarizedNumbers: rgb(112, 141, 140);
+  }
+  
+  body {
+    font-family: "Fira Code", monospace;
+    background-color: var(--darkBodyBg);
+    color: var(--darkText);
+  }
+  a {
+    color: var(--darkLinks);
+    cursor: pointer;
+  }
+  a:hover {
+    color: var(--darkLinksHover);
+  }
+  p {
+    line-height: 1.5rem;
+  }
+  .wrapper {
+    width: min(100%, 800px);
+  
+    margin: 0 auto;
+  }
+  nav {
+    margin-top: 4.5rem;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+  ul {
+    list-style: none;
+  }
+  nav ul {
+    display: flex;
+    gap: 1px;
+    min-width: fit-content;
+  }
+  nav li {
+    background-color: rgb(45, 45, 45);
+    padding: 0.6rem 4rem 0.4rem 0.7rem;
+    min-width: max-content;
+    text-align: left;
+    cursor: pointer;
+    font-size: small;
+  }
+  nav li a {
+    color: var(--darkText);
+    text-decoration: none;
+  }
+  nav li a:hover {
+    color: inherit;
+  }
+  nav ul .home {
+    background-color: var(--darkBg);
+    color: white;
+  }
+  .main {
+    padding-block: 1.5rem;
+    height: 250vh;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--darkBg);
+    padding-inline: 5rem;
+    position: relative;
+  }
+  .main .num_line {
+    position: absolute;
+    left: 2rem;
+    font-size: 17px;
+    text-align: right;/
+  }
+  
+  .main .num_line a {
+    color: var(--darkNumbers);
+    text-decoration: none;
+  }
+  
+  .main .num_line a:hover {
+    color: var(--darkText);
+  }
+  
+  .separator {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .separator span {
+    gap: 10px;
+    color: var(--darkSeparator);
+  }
+  .separator hr {
+    border: none;
+    font-size: large;
+    width: 95%;
+    border-bottom: 1.9px dashed var(--darkSeparator);
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  
+  /* FOOTER */
+  .foot {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    margin-bottom: 90vh;
+  }
+  .foot_links {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  .foot_links li,
+  .link {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: var(--darkLinks);
+  }
+  .foot_theme select {
+    color: var(--darkText);
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(200, 200, 200);
+    background-color: inherit;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  .foot_theme select:hover {
+    color: var(--darkLinksHover);
+  }
+  .foot_theme option {
+    background-color: inherit;
+  }
+  
+  /* HOME STYLING */
+  
+  #first-content-container,
+  #second-content-container,
+  #third-content-container,
+  #fourth-content-container,
+  #fifth-content-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .first-content2 {
+    padding-left: 25px;
+    padding-right: 55px;
+  }
+  
+  .first-content2 h2 {
+    font-size: 20px;
+  }
+  
+  .first-content2 .paragraph1,
+  .paragraph2 {
+    font-size: 16px;
+  }
+  
+  .first-content2 .paragraph1 {
+    margin-bottom: 1rem;
+  }
+  
+  .first-content2 .paragraph1 a {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-weight: 600;
+  }
+  
+  .second-content1 a img,
+  .third-content1 a img,
+  .fourth-content1 a img {
+    height: 100px;
+    width: 180px;
+  }
+  
+  .second-content2,
+  .third-content2,
+  .fourth-content2 {
+    width: 80%;
+    padding-left: 15px;
+  }
+  
+  .second-content2 a,
+  .third-content2 a,
+  .fourth-content2 a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--darkText);
+    font-weight: 600;
+  }
+  
+  .second-content2 a:hover,
+  .third-content2 a:hover,
+  .fourth-content2 a:hover {
+    color: var(--darkLinksHover);
+  }
+  
+  .second-content2 .calculating-digits,
+  .third-content2 .calculating-digits {
+    font-size: 16px;
+  }
+  
+  .date-posted {
+    margin-top: 1.8rem;
+    font-size: 13px;
+  }
+  
+  .third-content1 a img,
+  .fourth-content1 a img {
+    margin-top: 0.3rem;
+  }
+  
+  .third-content2,
+  .fourth-content2 {
+    margin-top: 0.5rem;
+  }
+  
+  .date {
+    font-size: 13px;
+    margin-top: 0.3rem;
+  }
+  
+  .fourth-date {
+    margin-top: 1.7rem;
+    font-size: 13px;
+  }
+  
+  .read-more-section {
+    margin-top: 0.5rem;
+  }
+  
+  .read-more-section a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--darkText);
+    font-weight: 600;
+  }
+  
+  .read-more-section a:hover {
+    color: var(--darkLinksHover);
+  }
+  
+  .fa-sharp {
+    font-size: 12px;
+    color: #4ec9b0;
+  }
+  
+  .fa-sharp:hover {
+    color: var(--darkLinksHover);
+  }
+  
+  .separator2 {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .separator2 span {
+    gap: 10px;
+    color: var(--darkSeparator);
+  }
+  .separator2 hr {
+    border: none;
+    font-size: large;
+    width: 95%;
+    border-bottom: 1.9px dashed var(--darkSeparator);
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  
+  #fifth-content-container {
+    margin-bottom: 1rem;
+  }
+  
+  .fifth-content2 {
+    padding-left: 25px;
+    padding-right: 55px;
+  }
+  
+  .fifth-content2 h2 {
+    font-size: 18px;
+  }
+  
+  .fifth-content2 p {
+    font-size: 16px;
+  }
+  
+  .fifth-content2 a {
+    text-underline-offset: 5px;
+    text-decoration: underline;
+  }
+  
+  .separator3 {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    margin-top: 1.3rem;
+  }
+  
+  .separator3 span {
+    gap: 10px;
+    color: var(--darkSeparator);
+  }
+  .separator3 hr {
+    border: none;
+    font-size: large;
+    width: 95%;
+    border-bottom: 1.9px dashed var(--darkSeparator);
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  
+  /* BLOG BLOG BLOG BLOG BLOG BLOG */
+  
+  /* PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS */
+  

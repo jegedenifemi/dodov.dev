@@ -140,7 +140,7 @@ nav li {
 }
 nav a,
 nav a:hover {
-  color: var(--Text);
+  color: var(--Numbers);
   text-decoration: none;
 }
 nav ul .home {
@@ -298,7 +298,7 @@ nav ul .home {
   font-weight: 600;
 }
 
-.latest{
+.latest {
   margin-bottom: 1.5rem;
 }
 
@@ -637,6 +637,9 @@ header {
   .foot_links {
     flex-direction: column;
   }
+  .foot_theme {
+    width: fit-content;
+  }
   .foot_links span {
     display: none;
   }
@@ -687,19 +690,20 @@ header {
     margin-top: 2rem;
   }
 
-  .separator{
+  .separator {
     margin-top: 1.7rem;
   }
 
-  .latest{
+  .latest {
     margin-bottom: 2rem;
   }
 
-  .fourth-content2{
+  .fourth-content2 {
     margin-top: 1.8rem;
   }
 
-  .second-content2, .third-content2{
+  .second-content2,
+  .third-content2 {
     margin-top: 1.6rem;
   }
 
@@ -707,7 +711,7 @@ header {
     margin-top: 1.8rem;
   }
 
-  .separator2{
+  .separator2 {
     margin-bottom: 1.7rem;
     margin-top: 1.6rem;
   }
@@ -716,10 +720,9 @@ header {
     padding-top: 0.5rem;
   }
 
-  .foot{
+  .foot {
     margin-top: 1.8rem;
     font-size: 14px;
     line-height: 1.1rem;
   }
-
 }

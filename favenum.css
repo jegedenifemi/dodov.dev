@@ -1,409 +1,391 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* DARK+ THEME */
+  --darkBodyBg: rgb(37, 37, 37);
+  --darkBg: rgb(30, 30, 30);
+  --darkLinks: rgb(78, 201, 176);
+  --darkLinksHover: rgb(78, 148, 206);
+  --darkSeparator: rgb(106, 153, 85);
+  --darkText: rgb(212, 212, 212);
+  --darkHeadings: rgb(181, 181, 181);
+  --darkNumbers: rgb(124, 124, 124);
+
+  /* LIGHT+ THEME */
+  --lightBodyBg: rgb(243, 243, 243);
+  --lightBg: rgb(255, 255, 255);
+  --lightLinks: rgb(78, 126, 139);
+  --lightLinksHover: rgb(38, 101, 210);
+  --lightSeparator: rgb(43, 97, 43);
+  --lightText: black;
+  --lightHeadings: rgb(0, 0, 0);
+  --lightNumbers: rgb(92, 138, 154);
+
+  /* MONOKAI THEME */
+  --monokaiBodyBg: rgb(30, 30, 28);
+  --monokaiBg: rgb(39, 40, 34);
+  --monokaiLinks: rgb(173, 205, 108);
+  --monokaiLinksHover: var(--darkLinksHover);
+  --monokaiSeparator: rgb(134, 132, 120);
+  --monokaiText: rgb(242, 243, 237);
+  --monokaiHeadings: rgb(247, 248, 242);
+  --monokaiNumbers: rgb(143, 144, 138);
+
+  /* GITHUB DARK */
+  --gitDarkBodyBg: rgb(27, 30, 35);
+  --gitDarkBg: rgb(36, 41, 45);
+  --gitDarkLinks: rgb(176, 201, 221);
+  --gitDarkLinksHover: var(--darkLinksHover);
+  --gitDarkSeparator: rgb(108, 114, 122);
+  --gitDarkText: rgb(225, 228, 233);
+  --gitDarkHeadings: rgb(225, 228, 233);
+  --gitDarkNumbers: rgb(121, 131, 141);
+
+  /* GITHUB LIGHT */
+  --gitLightBodyBg: rgb(247, 248, 250);
+  --gitLightBg: rgb(255, 255, 255);
+  --gitLightLinks: rgb(63, 88, 117);
+  --gitLightLinksHover: var(--lightLinksHover);
+  --gitLightSeparator: rgb(109, 114, 119);
+  --gitLightText: rgb(64, 65, 68);
+  --gitLightHeadings: rgb(37, 41, 45);
+  --gitLightNumbers: rgb(187, 187, 187);
+
+  /* SOLARIZED LIGHT */
+  --solarizedBodyBg: rgb(239, 232, 213);
+  --solarizedBg: rgb(253, 246, 227);
+  --solarizedLinks: rgb(70, 131, 169);
+  --solarizedLinksHover: var(--lightLinksHover);
+  --solarizedSeparator: rgb(109, 114, 119);
+  --solarizedText: rgb(61, 57, 45);
+  --solarizedHeadings: rgb(77, 75, 68);
+  --solarizedNumbers: rgb(112, 141, 140);
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  background-color: var(--darkBodyBg);
+  color: var(--darkText);
+}
+
+.wrapper {
+  width: 63%;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--darkLinks);
+  cursor: pointer;
+}
+a:hover {
+  color: var(--darkLinksHover);
+}
+p {
+  line-height: 1.4rem;
+  font-size: 16px;
+}
+
+nav {
+  margin-top: 4.5rem;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+nav::-webkit-scrollbar {
+  display: none;
+}
+ul {
+  list-style: none;
+}
+nav ul {
+  display: flex;
+  gap: 1px;
+  min-width: fit-content;
+}
+nav li {
+  background-color: rgb(45, 45, 45);
+  padding: 0.6rem 4rem 0.4rem 0.7rem;
+  min-width: max-content;
+  text-align: left;
+  cursor: pointer;
+  font-size: small;
+}
+nav li a {
+  color: #a3a3a3;
+  text-decoration: none;
+}
+nav li a:hover {
+  color: #a3a3a3;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-text h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.modal1 {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+.modal1 img {
+  width: 63rem;
+  cursor: zoom-in;
+}
+
+#img1 {
+  width: 31rem;
+  cursor: zoom-in;
+}
+.main {
+  padding-block: 1.5rem;
+  height: 250vh;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--darkBg);
+  padding-inline: 5rem;
+  position: relative;
+}
+.main .num_line {
+  position: absolute;
+  left: 2rem;
+  font-size: 17px;
+  text-align: right;
+}
+
+.main .num_line a {
+  color: var(--darkNumbers);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main .num_line a:hover {
+  color: var(--darkText);
+}
+
+.separator {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  margin-bottom: 1.4rem;
+  margin-top: 2rem;
+}
+
+.separator span {
+  gap: 10px;
+  color: var(--darkSeparator);
+}
+.separator hr {
+  border: none;
+  font-size: large;
+  width: 95%;
+  border-bottom: 1.9px dashed var(--darkSeparator);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.foot {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+  margin-bottom: 90vh;
+}
+.foot_links {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.foot_links li,
+.link {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: var(--darkLinks);
+}
+.foot_theme select {
+  color: var(--darkText);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(200, 200, 200);
+  background-color: inherit;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.foot_theme select:hover {
+  color: var(--darkLinksHover);
+}
+.foot_theme option {
+  background-color: inherit;
+}
+
+.numbers {
+  visibility: hidden;
+}
+@media screen and (max-width: 600px) {
+  #img1 {
+    max-width: 400px;
   }
-  :root {
-    /* DARK+ THEME */
-    --darkBodyBg: rgb(37, 37, 37);
-    --darkBg: rgb(30, 30, 30);
-    --darkLinks: rgb(78, 201, 176);
-    --darkLinksHover: rgb(78, 148, 206);
-    --darkSeparator: rgb(106, 153, 85);
-    --darkText: rgb(212, 212, 212);
-    --darkHeadings: rgb(181, 181, 181);
-    --darkNumbers: rgb(124, 124, 124);
-  
-    /* LIGHT+ THEME */
-    --lightBodyBg: rgb(243, 243, 243);
-    --lightBg: rgb(255, 255, 255);
-    --lightLinks: rgb(78, 126, 139);
-    --lightLinksHover: rgb(38, 101, 210);
-    --lightSeparator: rgb(43, 97, 43);
-    --lightText: black;
-    --lightHeadings: rgb(0, 0, 0);
-    --lightNumbers: rgb(92, 138, 154);
-  
-    /* MONOKAI THEME */
-    --monokaiBodyBg: rgb(30, 30, 28);
-    --monokaiBg: rgb(39, 40, 34);
-    --monokaiLinks: rgb(173, 205, 108);
-    --monokaiLinksHover: var(--darkLinksHover);
-    --monokaiSeparator: rgb(134, 132, 120);
-    --monokaiText: rgb(242, 243, 237);
-    --monokaiHeadings: rgb(247, 248, 242);
-    --monokaiNumbers: rgb(143, 144, 138);
-  
-    /* GITHUB DARK */
-    --gitDarkBodyBg: rgb(27, 30, 35);
-    --gitDarkBg: rgb(36, 41, 45);
-    --gitDarkLinks: rgb(176, 201, 221);
-    --gitDarkLinksHover: var(--darkLinksHover);
-    --gitDarkSeparator: rgb(108, 114, 122);
-    --gitDarkText: rgb(225, 228, 233);
-    --gitDarkHeadings: rgb(225, 228, 233);
-    --gitDarkNumbers: rgb(121, 131, 141);
-  
-    /* GITHUB LIGHT */
-    --gitLightBodyBg: rgb(247, 248, 250);
-    --gitLightBg: rgb(255, 255, 255);
-    --gitLightLinks: rgb(63, 88, 117);
-    --gitLightLinksHover: var(--lightLinksHover);
-    --gitLightSeparator: rgb(109, 114, 119);
-    --gitLightText: rgb(64, 65, 68);
-    --gitLightHeadings: rgb(37, 41, 45);
-    --gitLightNumbers: rgb(187, 187, 187);
-  
-    /* SOLARIZED LIGHT */
-    --solarizedBodyBg: rgb(239, 232, 213);
-    --solarizedBg: rgb(253, 246, 227);
-    --solarizedLinks: rgb(70, 131, 169);
-    --solarizedLinksHover: var(--lightLinksHover);
-    --solarizedSeparator: rgb(109, 114, 119);
-    --solarizedText: rgb(61, 57, 45);
-    --solarizedHeadings: rgb(77, 75, 68);
-    --solarizedNumbers: rgb(112, 141, 140);
-  }
-  
-  body {
-    font-family: "Fira Code", monospace;
-    background-color: var(--darkBodyBg);
-    color: var(--darkText);
+}
+/* @media (min-width: 670px) and (max-width: 930px) {
+  #first-content-container {
+    flex-direction: column;
   }
 
   .wrapper {
-    width: 63%;
+    width: 85%;
+    max-width: 800px;
     margin: 0 auto;
-  }
-
-  a {
-    color: var(--darkLinks);
-    cursor: pointer;
-  }
-  a:hover {
-    color: var(--darkLinksHover);
-  }
-  p {
-    line-height: 1.4rem;
-    font-size: 16px;
-  }
-
-  nav {
-    margin-top: 4.5rem;
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  nav::-webkit-scrollbar {
-    display: none;
-  }
-  ul {
-    list-style: none;
-  }
-  nav ul {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    align-items: center;
     display: flex;
-    gap: 1px;
-    min-width: fit-content;
-  }
-  nav li {
-    background-color: rgb(45, 45, 45);
-    padding: 0.6rem 4rem 0.4rem 0.7rem;
-    min-width: max-content;
-    text-align: left;
-    cursor: pointer;
-    font-size: small;
-  }
-  nav li a {
-    color: #a3a3a3;
-    text-decoration: none;
-  }
-  nav li a:hover {
-    color: #a3a3a3;
-  }
-  nav ul .home {
-    background-color: var(--darkBg);
-    pointer-events: none;
   }
 
   header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
-  
-  .header-text h4 {
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
-  .date {
+
+  header .date {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
-  }
-  
-  .modal1
-   {
-    display: none;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    cursor: zoom-out;
-  }
-  .modal1 img {
-    width: 63rem;
-    cursor: zoom-in;
+
+    align-items: flex-start;
   }
 
-  #img1 {
-    width: 31rem;
-    cursor: zoom-in;
+  .ohpee {
+    visibility: none;
+  }
+
+  body {
+    font-family: "Fira Code", monospace;
+    background-color: var(--darkBodyBg);
+  }
+
+  nav li {
+    padding-right: 4vw;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
   }
   .main {
-    padding-block: 1.5rem;
-    height: 250vh;
-    width: 100%;
-    height: fit-content;
-    background-color: var(--darkBg);
-    padding-inline: 5rem;
-    position: relative;
+    padding-inline: 3rem 1rem;
   }
   .main .num_line {
-    position: absolute;
-    left: 2rem;
-    font-size: 17px;
-    text-align: right;
-  }
-  
-  .main .num_line a {
-    color: var(--darkNumbers);
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .main .num_line a:hover {
-    color: var(--darkText);
+    left: 0.8rem;
   }
 
-  .separator {
-    display: flex;
-    gap: 1rem;
-    position: relative;
-    margin-bottom: 1.4rem;
-    margin-top: 2rem;
-  }
-  
-  .separator span {
-    gap: 10px;
-    color: var(--darkSeparator);
-  }
-  .separator hr {
-    border: none;
-    font-size: large;
-    width: 95%;
-    border-bottom: 1.9px dashed var(--darkSeparator);
-    position: absolute;
-    right: 0;
-    top: 50%;
+  nav {
+    margin-top: 0rem;
   }
 
   .foot {
-    display: flex;
-    margin-top: 2rem;
-    justify-content: space-between;
-    margin-bottom: 90vh;
+    gap: 1.5rem;
   }
+  .foot,
   .foot_links {
-    display: flex;
-    list-style: none;
-    gap: 0.5rem;
-    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  .foot_links li,
-  .link {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    color: var(--darkLinks);
+  .foot_links span {
+    display: none;
   }
-  .foot_theme select {
-    color: var(--darkText);
-    font-weight: 600;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: rgb(200, 200, 200);
-    background-color: inherit;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    cursor: pointer;
-    
+} */
+
+@media (min-width: 350px) and (max-width: 670px) {
+  #first-content-container {
+    flex-direction: column;
   }
-  .foot_theme select:hover {
-    color: var(--darkLinksHover);
-  }
-  .foot_theme option {
-    background-color: inherit;
-  }
-  
   .numbers {
+    visibility: visible;
+  }
+  .wrapper {
+    width: 90%;
+    margin: 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .date {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .ohpee {
     visibility: hidden;
   }
-  @media (min-width: 670px) and (max-width: 930px) {
-    #first-content-container {
-      flex-direction: column;
-    }
-    
 
-    .wrapper {
-        width: 85%;
-        max-width: 800px;
-        margin: 0 auto;
-        padding-top: 15px;
-        padding-bottom: 10px;
-        margin-left: 15px;
-        align-items: center;
-        display: flex;
-    }
-
-    header {
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        
-    }
-
-    header .date {
-        display: flex;
-        flex-direction: column;
-        
-        align-items: flex-start;
-    }
-
-    .ohpee {
-        visibility: none;
-    }
-
-   
-
-    body {
-        font-family: "Fira Code", monospace;
-        background-color:var(--darkBodyBg);
-        
-      }
-  
-    nav li {
-      padding-right: 4vw;
-      display: flex;
-      flex-direction: column;
-      background-color: red;
-    }
-    .main {
-      padding-inline: 3rem 1rem;
-    }
-    .main .num_line {
-      left: 0.8rem;
-    }
-  
-    nav {
-      margin-top: 0rem;
-    }
-  
-    
-  
-    .foot {
-      gap: 1.5rem;
-    }
-    .foot,
-    .foot_links {
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .foot_links span {
-      display: none;
-    }
-
-   
-    
+  #img1 {
+    height: 250px;
+    width: 350px;
   }
 
-
-  @media (min-width: 350px) and (max-width: 670px) {
-    #first-content-container {
-      flex-direction: column;
-    }
-    .numbers {
-      visibility: visible;
-    }
-    .wrapper {
-        width: 90%;
-        margin: 0;
-    }
-
-    header {
-        display:flex;
-        flex-direction: column;
-        
-    }
-
-    header .date {
-        display: flex;
-        flex-direction: column;
-        
-        align-items: flex-start;
-    }
-
-    .ohpee {
-        visibility: hidden;
-    }
-
-    #img1 {
-        height: 250px;
-        width: 350px;
-    }
-
-    .modal1 img {
-        width: 33rem;
-        cursor: zoom-in;
-      }
-
-    body {
-        font-family: "Fira Code", monospace;
-        background-color:var(--darkBg);
-        ;
-      }
-  
-    nav li {
-      padding-right: 4vw;
-    }
-    .main {
-      padding-inline: 3rem 1rem;
-    }
-    .main .num_line {
-      left: 0.8rem;
-    }
-  
-    nav {
-      margin-top: 0rem;
-    }
-  
-    
-  
-    .foot {
-      gap: 1.5rem;
-    }
-    .foot,
-    .foot_links {
-      flex-direction: column;
-    }
-    .foot_links span {
-      display: none;
-    }
-    
+  .modal1 img {
+    width: 33rem;
+    cursor: zoom-in;
   }
-  
+
+  body {
+    font-family: "Fira Code", monospace;
+    background-color: var(--darkBg);
+  }
+
+  nav li {
+    padding-right: 4vw;
+  }
+  .main {
+    padding-inline: 3rem 1rem;
+  }
+  .main .num_line {
+    left: 0.8rem;
+  }
+
+  nav {
+    margin-top: 0rem;
+  }
+
+  .foot {
+    gap: 1.5rem;
+  }
+  .foot,
+  .foot_links {
+    flex-direction: column;
+  }
+  .foot_links span {
+    display: none;
+  }
+}

@@ -86,4 +86,9 @@ themeDropDown.onchange = () => {
       "https://dodov.dev/media/site/b038a44974-1640615600/favicon-solarized-light.png"
     );
   }
+
+  // KEEP SAME FAVICON EVEN ON A DIFFERENT PAGE
+  localStorage.setItem("icon", newLink.href);
+  const storedIcon = localStorage.getItem("icon");
+  window.onload = changeFavicon(storedIcon);
 };

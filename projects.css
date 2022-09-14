@@ -47,3 +47,62 @@ img {
   font-size: large;
   color: inherit;
 }
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .nexo,
+  .rundown,
+  .ghostmask,
+  .oblik {
+    position: relative;
+  }
+  .nexo-image,
+  .rundown-image,
+  .ghostmask-image,
+  .oblik-image {
+    width: 45px;
+    height: 45px;
+  }
+  .nexo-link,
+  .rundown-link,
+  .ghostmask-link,
+  .oblik-link {
+    display: none;
+  }
+  .mobile {
+    display: unset;
+  }
+  .nexo-text,
+  .rundown-text,
+  .ghostmask-text,
+  .oblik-text {
+    margin-bottom: 4rem;
+  }
+  .nexo-paragraph,
+  .rundown-paragraph,
+  .ghostmask-paragraph,
+  .oblik-paragraph {
+    position: absolute;
+    left: 0;
+    top: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nexo-text,
+  .rundown-text,
+  .ghostmask-text,
+  .oblik-text {
+    margin-bottom: 5.3rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .nexo-text,
+  .rundown-text,
+  .ghostmask-text,
+  .oblik-text {
+    margin-bottom: 6.5rem;
+  }
+}

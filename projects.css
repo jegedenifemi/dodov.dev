@@ -89,7 +89,7 @@ img {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 535px) {
   .nexo-text,
   .rundown-text,
   .ghostmask-text,
@@ -98,11 +98,12 @@ img {
   }
 }
 
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 390px) {
   .nexo-text,
-  .rundown-text,
-  .ghostmask-text,
-  .oblik-text {
+  .rundown-text {
     margin-bottom: 6.5rem;
+  }
+  .ghostmask-text {
+    margin-bottom: 6.2rem;
   }
 }
